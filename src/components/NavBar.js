@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { BsSearch } from 'react-icons/bs'
 
 const NavBar = () => {
     return (
@@ -16,6 +17,7 @@ const NavBar = () => {
             </div>
             <div className='mr-10 bg-gray-800 h-9 flex flex-row items-center p-2' >
                 <input className='bg-transparent border-none outline-none' placeholder='Search...' />
+                <BsSearch className='cursor-pointer' />
             </div>
         </div>
     )
