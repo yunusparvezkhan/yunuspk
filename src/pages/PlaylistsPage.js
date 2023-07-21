@@ -1,9 +1,9 @@
 import React from 'react'
 
-const PlayLists = () => {
+const PlaylistsPage = () => {
     return (
         <div>PlayLists</div>
     )
 }
 
-export default PlayLists
+export default PlaylistsPage;
