@@ -33,7 +33,7 @@ const Link = ({ to, secondaryPath, children, ...rest }) => {
 
     return (
         <a  {...rest} key={to} onClick={handleClick} >
-            <button className='px-2 py-1'>{children}</button>
+            <button>{children}</button>
         </a>
     )
 }

@@ -11,13 +11,20 @@ const NavBar = () => {
 
     const stylefunc = (path, secondaryPath) => {
         if (path === activePage || secondaryPath === activePage) {
-            return "text-gray-800 font-bold underline "
+            return "text-gray-900 hover:text-gray-100 "
         }
     }
 
     const renderNavBtns = links.map((link) => {
         return (
-            <Link to={link.path} secondaryPath={link.secondaryPath} className={stylefunc(link.path) + ' ' + stylefunc(link.secondaryPath)} key={link.path} >{link.title}</Link>
+            <Link
+                to={link.path}
+                secondaryPath={link.secondaryPath}
+                className={'px-2 py-1 hover:bg-gray-800 cursor-pointer ' + stylefunc(link.path) + ' ' + stylefunc(link.secondaryPath)}
+                key={link.path}
+            >
+                {link.title}
+            </Link>
         )
     });
 
