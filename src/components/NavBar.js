@@ -2,55 +2,12 @@ import React from 'react';
 import { BsSearch } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 import Link from './Link';
+import { links } from '../data/navbar-links';
 
 const NavBar = () => {
     const { activePage } = useSelector((state) => {
         return state.navigation;
     })
-
-
-    const links = [
-        {
-            title: 'home',
-            path: '/home',
-            secondaryPath: '/'
-        },
-        {
-            title: 'about',
-            path: '/about',
-            secondaryPath: ''
-        },
-        {
-            title: 'blogs',
-            path: '/blogs',
-            secondaryPath: ''
-        },
-        {
-            title: 'projects',
-            path: '/projects',
-            secondaryPath: ''
-        },
-        {
-            title: 'achievements',
-            path: '/achievements',
-            secondaryPath: ''
-        },
-        {
-            title: 'academics',
-            path: '/academics',
-            secondaryPath: ''
-        },
-        {
-            title: 'playlists',
-            path: '/playlists',
-            secondaryPath: ''
-        },
-        {
-            title: 'contact',
-            path: '/contact',
-            secondaryPath: ''
-        },
-    ];
 
     const stylefunc = (path, secondaryPath) => {
         if (path === activePage || secondaryPath === activePage) {
