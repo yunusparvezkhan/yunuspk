@@ -10,9 +10,9 @@ const LandingPage = () => {
 				<div className='sec-intro-container text-white lftf t-0 absolute h-full w-1kpx'>
 					<h4>Hello.Namaste</h4>
 					<h5>I am</h5>
-					<h1>Yunus</h1>
-					<h3>Parvez</h3>
-					<h2>Khan</h2>
+					<h1>YUNUS</h1>
+					<h3>PARVEZ</h3>
+					<h2>KHAN</h2>
 					<img
 						alt="Yunus Parvez Khan smilling and introducing something"
 						src={ypkWelcome}

@@ -9,7 +9,7 @@
 }
 
 .sec-intro-container h4 {
-    font-size: 50px;
+    font-size: 70px;
     font-family: 'Caveat', cursive;
     font-weight: 700;
     color: #ffffff;
@@ -24,7 +24,7 @@
     font-size: 90px;
     font-family: 'Satisfy', cursive;
     font-weight: 400;
-    color: #717171;
+    color: #DBDBDB;
     position: absolute;
     top: 170px;
     left: 50%;
@@ -44,14 +44,14 @@
 }
 
 .sec-intro-container h3 {
-    font-size: 100px;
+    font-size: 110px;
     font-family: 'Caveat brush', cursive;
     font-weight: bolder;
     letter-spacing: 10px;
     font-style: italic;
     color: #3963B7;
     position: absolute;
-    top: 400px;
+    top: 380px;
     left: 50%;
     transform: translate(-50%);
 }
