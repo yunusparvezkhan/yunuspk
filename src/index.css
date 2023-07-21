@@ -6,3 +6,20 @@
 
 /* Fonts --> */
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Caveat&family=Caveat+Brush&family=Satisfy&display=swap');
+
+.lftf {
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.t-100px {
+    top: 100px;
+}
+
+.w-1kpx {
+    width: 1000px;
+}
+
+.h-600px {
+    height: 600px;
+}
