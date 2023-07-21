@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { changeActivePage } from '../store';
 
-const Link = ({ to, children, ...rest }) => {
+const Link = ({ to, secondaryPath, children, ...rest }) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -18,9 +18,9 @@ const Link = ({ to, children, ...rest }) => {
 
     }, [dispatch])
 
-    const navigate = (to) => {
-        window.history.pushState({}, '', to);
-        dispatch(changeActivePage(to));
+    const navigate = (path) => {
+        window.history.pushState({}, '', path);
+        dispatch(changeActivePage(path));
     }
 
     const handleClick = (event) => {
@@ -28,7 +28,7 @@ const Link = ({ to, children, ...rest }) => {
             return;
         }
         event.preventDefault();
-        navigate(to);
+        secondaryPath ? navigate(secondaryPath) : navigate(to);
     }
 
     return (

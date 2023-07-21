@@ -52,15 +52,15 @@ const NavBar = () => {
         },
     ];
 
-    const stylefunc = (path) => {
-        if (path === activePage) {
+    const stylefunc = (path, secondaryPath) => {
+        if (path === activePage || secondaryPath === activePage) {
             return "text-gray-800 font-bold underline "
         }
     }
 
     const renderNavBtns = links.map((link) => {
         return (
-            <Link to={link.path} className={stylefunc(link.path)} key={link.path} >{link.title}</Link>
+            <Link to={link.path} secondaryPath={link.secondaryPath} className={stylefunc(link.path) + ' ' + stylefunc(link.secondaryPath)} key={link.path} >{link.title}</Link>
         )
     });
 

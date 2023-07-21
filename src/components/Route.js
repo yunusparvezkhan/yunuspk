@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux'
 
-const Route = ({ path, children }) => {
+const Route = ({ path, secondaryPath, children }) => {
     const { activePage } = useSelector((state) => {
         return state.navigation;
     })
 
-    if (activePage === path) {
+    if (activePage === path || activePage === secondaryPath) {
         return children
     } else {
         return;

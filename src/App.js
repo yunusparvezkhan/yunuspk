@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <NavBar />
       YunusPK
-      <Route path='/home'>
+      <Route path='/home' secondaryPath='/' >
         <LandingPage />
       </Route>
 
