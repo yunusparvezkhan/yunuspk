@@ -1,16 +1,13 @@
 import React from 'react';
 import { BsSearch } from 'react-icons/bs';
-import { useDispatch, useSelector } from 'react-redux';
-import { changeActivePage } from '../store';
+import { useSelector } from 'react-redux';
 import Link from './Link';
 
 const NavBar = () => {
-    const dispatch = useDispatch();
     const { activePage } = useSelector((state) => {
         return state.navigation;
     })
 
-    console.log(activePage);
 
     const links = [
         {
