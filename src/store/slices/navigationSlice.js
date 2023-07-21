@@ -3,11 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 const navigationSlice = createSlice({
     name: 'navigation',
     initialState: {
-        activePage: 'home'
+        activePage: '/home'
     },
     reducers: {
         changeActivePage(state, action) {
-            return action.payload;
+            return {
+                activePage: action.payload
+            }
         }
     }
 })

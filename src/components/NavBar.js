@@ -1,10 +1,11 @@
 import React from 'react';
 import { BsSearch } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
+import { changeActivePage } from '../store';
+import Link from './Link';
 
 const NavBar = () => {
     const dispatch = useDispatch();
-
     const { activePage } = useSelector((state) => {
         return state.navigation;
     })
@@ -54,16 +55,23 @@ const NavBar = () => {
         },
     ];
 
+    const stylefunc = (path) => {
+        if (path === activePage) {
+            return "text-gray-800 font-bold underline "
+        }
+    }
+
     const renderNavBtns = links.map((link) => {
         return (
-            <button href={link.path} key={link.path} >{link.title}</button>
+            <Link to={link.path} className={stylefunc(link.path)} key={link.path} >{link.title}</Link>
         )
-    })
+    });
+
 
     return (
         <div className='w-full bg-blue-500 h-14 flex flex-row items-center justify-between text-white' >
             <h1 className='text-3xl font-thin ml-10'>YunusPK</h1>
-            <div className='flex flex-row items-center gap-5'>
+            <div className='flex flex-row items-center gap-2'>
                 {renderNavBtns}
             </div>
             <div className='mr-10 bg-gray-800 h-9 flex flex-row items-center p-2' >
