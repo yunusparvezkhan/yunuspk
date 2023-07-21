@@ -1,7 +1,14 @@
 import React from 'react';
 import { BsSearch } from 'react-icons/bs';
+import { useSelector } from 'react-redux';
 
 const NavBar = () => {
+    const { activePage } = useSelector((state) => {
+        return state.navigation;
+    })
+
+    console.log(activePage);
+
     return (
         <div className='w-full bg-blue-500 h-14 flex flex-row items-center justify-between text-white' >
             <h1 className='text-3xl font-thin ml-10'>YunusPK</h1>
