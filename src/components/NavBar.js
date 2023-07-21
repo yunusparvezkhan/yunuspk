@@ -3,6 +3,7 @@ import { BsSearch } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 import Link from './Link';
 import { links } from '../data/navbar-links';
+import './styles/navbar.css'
 
 const NavBar = () => {
     const { activePage } = useSelector((state) => {
@@ -30,7 +31,7 @@ const NavBar = () => {
 
 
     return (
-        <div className='w-full bg-blue-500 h-14 flex flex-row items-center justify-between text-white' >
+        <div className=' nav-bar flex flex-row items-center justify-between text-white' >
             <h1 className='text-3xl font-thin ml-10'>YunusPK</h1>
             <div className='flex flex-row items-center gap-2'>
                 {renderNavBtns}

@@ -1,0 +1,81 @@
+.sec-intro {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #0E1F30;
+}
+
+.sec-intro-container {
+    display: block;
+    border: 1px solid white;
+    width: 1000px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.sec-intro-container h4 {
+    font-size: 50px;
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 10px 10px 12px #000000A5;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    transform: rotate(-10deg);
+}
+
+.sec-intro-container h5 {
+    display: block;
+    font-size: 90px;
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+    color: #717171;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: rotate(5deg);
+}
+
+.sec-intro-container h1 {
+    display: block;
+    font-size: 130px;
+    font-family: 'Bowlby One SC', cursive;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: #EC604A;
+    position: absolute;
+    top: 235px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.sec-intro-container h3 {
+    display: block;
+    font-size: 100px;
+    font-family: 'Caveat brush', cursive;
+    font-weight: bolder;
+    letter-spacing: 10px;
+    font-style: italic;
+    color: #3963B7;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.sec-intro-container h2 {
+    display: block;
+    font-size: 100px;
+    font-family: 'Bowlby One SC', cursive;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: #EC604A;
+    position: absolute;
+    top: 520px;
+    left: 45%;
+    transform: translate(-50%);
+}
