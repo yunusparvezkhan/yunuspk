@@ -11,6 +11,10 @@
     transform: translate(-50%);
 }
 
+.ttzf {
+    transform: translate(0, -50%);
+}
+
 .ttff {
     transform: translate(-50%, -50%);
 }

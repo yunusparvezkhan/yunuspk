@@ -6,7 +6,7 @@ import './styles/intro-section.css';
 const IntroSection = () => {
     return (
         <div className='sec-intro relative w-full'>
-            <div className='sec-intro-container text-white left-1/2 ttf t-0 relative h-700px w-1kpx'>
+            <div className='sec-intro-container text-white left-1/2 ttf t-0 relative'>
                 <h4>Hello.Namaste</h4>
                 <h5>I am</h5>
                 <h1>YUNUS</h1>
@@ -15,7 +15,7 @@ const IntroSection = () => {
                 <img
                     alt="Yunus Parvez Khan smilling and introducing something"
                     src={ypkWelcome}
-                    className='h-600px absolute t-100px right-0'
+                    className='h-600px absolute right-0'
                 />
             </div>
             {/* This div contains a svg as background for nice visual effects */}

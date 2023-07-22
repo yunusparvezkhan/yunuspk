@@ -3,6 +3,13 @@
     background-color: #0E1F30;
 }
 
+.sec-intro-container {
+    width: 1000px;
+    transition: 0.2s;
+    height: 700px;
+    top: 100px;
+}
+
 .sec-intro-container h4 {
     font-size: 70px;
     font-family: 'Caveat', cursive;
@@ -10,7 +17,7 @@
     color: #ffffff;
     text-shadow: 10px 10px 12px #000000A5;
     position: absolute;
-    top: 150px;
+    top: 50px;
     left: 50px;
     transform: rotate(-10deg);
 }
@@ -21,7 +28,7 @@
     font-weight: 400;
     color: #DBDBDB;
     position: absolute;
-    top: 170px;
+    top: 70px;
     left: 50%;
     transform: rotate(5deg);
 }
@@ -33,7 +40,7 @@
     font-weight: 400;
     color: #EC604A;
     position: absolute;
-    top: 235px;
+    top: 135px;
     left: 48%;
     transform: translate(-50%);
 }
@@ -46,7 +53,7 @@
     font-style: italic;
     color: #3963B7;
     position: absolute;
-    top: 380px;
+    top: 280px;
     left: 48%;
     transform: translate(-50%);
 }
@@ -58,7 +65,7 @@
     font-weight: 400;
     color: #EC604A;
     position: absolute;
-    top: 520px;
+    top: 420px;
     left: 44%;
     transform: translate(-50%);
 }
@@ -70,4 +77,58 @@
     background-position: center;
     background-size: cover;
     height: 68px;
+}
+
+/* Media Query */
+
+@media(max-width: 1050px) {
+    .sec-intro-container {
+        width: 900px;
+    }
+}
+
+@media(max-width: 950px) {
+    .sec-intro {
+        height: calc(550px + 68px - 20px);
+    }
+
+    .sec-intro-container {
+        width: 700px;
+        height: 550px;
+        top: 0;
+    }
+
+    .sec-intro-container h4 {
+        font-size: 60px;
+    }
+
+    .sec-intro-container h5 {
+        font-size: 100px;
+    }
+
+    .sec-intro-container h1 {
+        font-size: 110px;
+        top: 150px;
+        left: 40%;
+    }
+
+    .sec-intro-container h3 {
+        font-size: 80px;
+        top: 285px;
+        left: 43%;
+    }
+
+    .sec-intro-container h2 {
+        font-size: 100px;
+        top: 370px;
+        left: 38%;
+    }
+
+    .sec-intro-container img {
+        height: 500px;
+        top: 50px;
+    }
+
+
+
 }

@@ -1,10 +1,8 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import IntroSection from './sections/IntroSection';
 import AboutSection from './sections/AboutSection';
 import './styles/landingpage.css'
-
-import { useSelector } from 'react-redux';
-
 
 const LandingPage = () => {
 
