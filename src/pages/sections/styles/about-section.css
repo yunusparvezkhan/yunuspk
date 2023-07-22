@@ -1,0 +1,12 @@
+.hexagon-image-container {
+    position: relative;
+    left: 50px;
+}
+
+.about-section h1 {
+    font-family: "alata", sans-serif;
+}
+
+.about-para {
+    width: 700px;
+}
