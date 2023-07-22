@@ -1,3 +1,11 @@
+* {
+    transition: 0.2s;
+}
+
+.about-section {
+    height: 600px;
+}
+
 .about-section h1 {
     font-family: "alata", sans-serif;
 }
@@ -16,11 +24,41 @@
 
 @media(max-width:1050px) {
     .about-para {
-        width: 300px;
+        width: 400px;
         font-size: 16px;
     }
 
     .about-section h1 {
         font-size: 38px;
+    }
+}
+
+@media(max-width:800px) {
+    .about-section {
+        height: 900px;
+    }
+
+    .about-section-hex-container {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -200px);
+    }
+
+    .about-section-content {
+        width: 500px;
+        position: absolute;
+        left: 50%;
+        top: 0px;
+        transform: translate(-50%);
+        text-align: center;
+        align-items: center;
+    }
+
+    .about-section-content h1 {
+        margin: 0;
+    }
+
+    .about-section-content p {
+        margin-left: 0;
     }
 }

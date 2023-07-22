@@ -23,6 +23,7 @@ const aboutSlice = createSlice({
             link: '',
             alt: 'Yunus Parvez Khan'
         },
+        // Do not put more than 450 charecters.
         paragraph: {
             text: `I am a Bharatiya scholar. I'm a Full Stack Web Developer, UI/UX Designer, YouTuber,
 			Filmmaker. I have an adventurous life and a lots of experiences. I love to
