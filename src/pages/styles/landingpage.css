@@ -1,0 +1,4 @@
+.landing-page {
+    background-color: #182d4a;
+    min-height: calc(100vh - 60px);
+}

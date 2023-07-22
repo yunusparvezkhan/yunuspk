@@ -1,8 +1,3 @@
-.landing-page {
-    background-color: #182d4a;
-    min-height: calc(100vh - 60px);
-}
-
 .sec-intro {
     height: calc(700px + 68px - 20px);
     background-color: #0E1F30;
