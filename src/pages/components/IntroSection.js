@@ -1,13 +1,12 @@
 import React from 'react';
 import ypkWelcome from '../../media/photos/ypk-welcome.png';
-import introSecFooter from './elements/intro-sec-footer.svg';
 import './styles/intro-section.css';
 
 
 const IntroSection = () => {
     return (
         <div className='sec-intro relative w-full'>
-            <div className='sec-intro-container text-white lftf t-0 relative h-700px border w-1kpx'>
+            <div className='sec-intro-container text-white lftf t-0 relative h-700px w-1kpx'>
                 <h4>Hello.Namaste</h4>
                 <h5>I am</h5>
                 <h1>YUNUS</h1>

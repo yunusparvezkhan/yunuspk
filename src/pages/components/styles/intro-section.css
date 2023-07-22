@@ -70,6 +70,7 @@
 
 .intro-sec-footer-div {
     top: -20px;
+    width: 100%;
     background-image: url('../elements/intro-sec-footer.svg');
     background-position: center;
     background-size: cover;
