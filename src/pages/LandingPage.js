@@ -1,6 +1,6 @@
 import React from 'react';
-import IntroSection from './components/IntroSection';
-import AboutSection from './components/AboutSection';
+import IntroSection from './sections/IntroSection';
+import AboutSection from './sections/AboutSection';
 
 const LandingPage = () => {
 	return (
