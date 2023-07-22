@@ -4,7 +4,7 @@
 }
 
 .sec-intro {
-    height: calc(60px + 670px + 38px - 5px);
+    height: calc(700px + 68px - 20px);
     background-color: #0E1F30;
 }
 
@@ -68,6 +68,10 @@
     transform: translate(-50%);
 }
 
-.intro-sec-footer {
-    top: 670px;
+.intro-sec-footer-div {
+    top: -20px;
+    background-image: url('../elements/intro-sec-footer.svg');
+    background-position: center;
+    background-size: cover;
+    height: 68px;
 }

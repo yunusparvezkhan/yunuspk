@@ -7,7 +7,7 @@ import './styles/intro-section.css';
 const IntroSection = () => {
     return (
         <div className='sec-intro relative w-full'>
-            <div className='sec-intro-container text-white lftf t-0 absolute h-full w-1kpx'>
+            <div className='sec-intro-container text-white lftf t-0 relative h-700px border w-1kpx'>
                 <h4>Hello.Namaste</h4>
                 <h5>I am</h5>
                 <h1>YUNUS</h1>
@@ -19,8 +19,8 @@ const IntroSection = () => {
                     className='h-600px absolute t-100px right-0'
                 />
             </div>
-            <img src={introSecFooter} className='intro-sec-footer absolute w-full' alt='Intro Section Footer Effect' />
-
+            {/* This div contains a svg as background for nice visual effects */}
+            <div className='intro-sec-footer-div relative w-full' />
         </div>
     )
 }
