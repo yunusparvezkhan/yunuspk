@@ -6,14 +6,14 @@ import './styles/landingpage.css'
 
 const LandingPage = () => {
 
-	const { image5, paragraph } = useSelector((state) => {
+	const { images, paragraph } = useSelector((state) => {
 		return state.about;
 	})
 
 	return (
 		<div className='landing-page text-white' >
 			<IntroSection />
-			<AboutSection image={image5.link} alt="something" bgcolor="#182d4a" borderColor="#20EC94" paragraph={paragraph.text} />
+			<AboutSection image={images[4].link} alt="something" bgcolor="#182d4a" borderColor="#20EC94" paragraph={paragraph.text} />
 		</div>
 	);
 }
