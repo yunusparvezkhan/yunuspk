@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import IntroSection from './sections/IntroSection';
-import AboutSection from './sections/AboutSection';
+import IntroSection from './IntroSection';
+import AboutSection from './AboutSection';
 import './styles/landingpage.css'
 
 const LandingPage = () => {
