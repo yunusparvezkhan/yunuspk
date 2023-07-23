@@ -16,6 +16,11 @@
     font-size: 18px;
 }
 
+.about-section-more-btn {
+    border-radius: 8px;
+    /* padding: 10px; */
+}
+
 @media(max-width:1200px) {
     .about-para {
         width: 500px;
