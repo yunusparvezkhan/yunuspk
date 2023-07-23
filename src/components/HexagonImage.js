@@ -20,10 +20,11 @@ const HexagonImage = ({ image, alt, bgcolor, borderColor }) => {
                         height: "260px", // width*√3/2 
                         clipPath: "polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
                     }}>
-                        <img src={image} alt={alt} className='relative' style={{
-                            width: "300px",
-                            height: "300px",
-                            transform: "translate(0, -20px)"
+                        <img src={image} alt={alt} className='absolute' style={{
+                            maxWidth: "100%",
+                            height: "auto",
+                            top: "50%",
+                            transform: "translate(0, -50%)"
                         }} />
                     </div>
                 </div>

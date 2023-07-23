@@ -4,7 +4,7 @@ const aboutSlice = createSlice({
     name: 'about',
     initialState: {
         image1: {
-            link: 'https://avatars.githubusercontent.com/u/55030221?v=4',
+            link: 'https://mediabase.netlify.app/ypk/photos/selfies/20220922_01.jpg',
             alt: 'Yunus Parvez Khan'
         },
         image2: {
