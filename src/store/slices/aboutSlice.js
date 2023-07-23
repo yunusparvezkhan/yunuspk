@@ -4,23 +4,27 @@ const aboutSlice = createSlice({
     name: 'about',
     initialState: {
         image1: {
-            link: 'https://mediabase.netlify.app/ypk/photos/selfies/20220922_01.jpg',
+            link: 'https://mediabase.netlify.app/ypk/photos/selfies/20190000_01.jpg',
             alt: 'Yunus Parvez Khan'
         },
         image2: {
-            link: '',
+            link: 'https://mediabase.netlify.app/ypk/photos/selfies/20220922_01.jpg',
             alt: 'Yunus Parvez Khan'
         },
         image3: {
-            link: '',
+            link: 'https://mediabase.netlify.app/ypk/photos/selfies/20230202_01.jpg',
             alt: 'Yunus Parvez Khan'
         },
         image4: {
-            link: '',
+            link: 'https://mediabase.netlify.app/ypk/photos/selfies/20230509_01.jpg',
             alt: 'Yunus Parvez Khan'
         },
         image5: {
-            link: '',
+            link: 'https://mediabase.netlify.app/ypk/photos/selfies/20230509_03.jpg',
+            alt: 'Yunus Parvez Khan'
+        },
+        image6: {
+            link: 'https://mediabase.netlify.app/ypk/photos/selfies/20230509_04.jpg',
             alt: 'Yunus Parvez Khan'
         },
         // Do not put more than 450 charecters.
