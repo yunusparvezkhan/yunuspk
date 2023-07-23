@@ -4,7 +4,7 @@ const aboutSlice = createSlice({
     name: 'about',
     initialState: {
         image1: {
-            link: 'https://lh3.google.com/u/0/d/1q-IlDz06QSIhClhbYp0cytZ7P9wI1ztx=w1920-h975-iv2',
+            link: 'https://avatars.githubusercontent.com/u/55030221?v=4',
             alt: 'Yunus Parvez Khan'
         },
         image2: {

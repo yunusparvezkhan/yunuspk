@@ -46,4 +46,4 @@ const AboutSection = ({ image, alt, bgcolor, borderColor, paragraph }) => {
     )
 }
 
-export default AboutSection
+export default AboutSection;
