@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import IntroSection from './IntroSection';
-import AboutSection from './AboutSection';
+import IntroSection from './sections/IntroSection';
+import AboutSection from './sections/AboutSection';
 import './styles/landingpage.css'
+import BlogsSection from './sections/BlogsSection';
 
 const LandingPage = () => {
 
@@ -14,6 +15,7 @@ const LandingPage = () => {
 		<div className='landing-page text-white' >
 			<IntroSection />
 			<AboutSection image={images[4].link} alt="something" bgcolor="#182d4a" borderColor="#20EC94" paragraph={paragraph.text} />
+			<BlogsSection />
 		</div>
 	);
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import './styles/about-section.css';
+import '../styles/about-section.css';
 
-import HexagonImage from '../../components/HexagonImage';
-import Button from '../../components/Button';
+import HexagonImage from '../../../components/HexagonImage';
+import Button from '../../../components/Button';
 import { GiArmoredBoomerang } from 'react-icons/gi'
-import Link from '../../components/Link';
+import Link from '../../../components/Link';
 
 const AboutSection = ({ image, alt, bgcolor, borderColor, paragraph }) => {
 

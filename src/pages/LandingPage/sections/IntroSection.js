@@ -1,6 +1,6 @@
 import React from 'react';
-import ypkWelcome from '../../media/photos/ypk-welcome.png';
-import './styles/intro-section.css';
+import ypkWelcome from '../../../media/photos/ypk-welcome.png';
+import '../styles/intro-section.css';
 
 
 const IntroSection = () => {
