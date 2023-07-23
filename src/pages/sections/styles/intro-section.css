@@ -1,8 +1,5 @@
-* {
-    transition: 0.2s;
-}
-
 .sec-intro {
+    transition: 0.2s;
     height: calc(700px + 68px - 20px);
     background-color: #0E1F30;
 }

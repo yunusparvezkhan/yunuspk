@@ -15,7 +15,7 @@ const AboutSection = ({ image, alt, bgcolor, borderColor, paragraph }) => {
                         borderColor={borderColor}
                     />
                 </div>
-                <div className='flex flex-col about-section-content' >
+                <div className='flex flex-col items-start about-section-content' >
                     <h1 className='text-5xl ml-10 w-fit ' >a bit about me !</h1>
                     <p className='ml-10 mt-10 about-para' >
                         {paragraph}
