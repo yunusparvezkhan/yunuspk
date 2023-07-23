@@ -6,6 +6,10 @@
     height: 800px;
 }
 
+.about-section-content {
+    align-items: flex-start;
+}
+
 .about-section h1 {
     font-family: "alata", sans-serif;
 }
@@ -18,7 +22,7 @@
 
 .about-section-more-btn {
     border-radius: 8px;
-    /* padding: 10px; */
+    margin-left: 40px;
 }
 
 @media(max-width:1200px) {
@@ -64,6 +68,10 @@
     }
 
     .about-section-content p {
+        margin-left: 0;
+    }
+
+    .about-section-more-btn {
         margin-left: 0;
     }
 }

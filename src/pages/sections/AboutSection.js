@@ -23,7 +23,7 @@ const AboutSection = ({ image, alt, bgcolor, borderColor, paragraph }) => {
                         borderColor={borderColor}
                     />
                 </div>
-                <div className='flex flex-col items-start about-section-content' >
+                <div className='flex flex-col about-section-content' >
                     <h1 className='text-5xl ml-10 w-fit ' >a bit about me !</h1>
 
                     <p className='ml-10 mt-10 font-sans about-para' >
@@ -32,7 +32,7 @@ const AboutSection = ({ image, alt, bgcolor, borderColor, paragraph }) => {
 
                     <Link to='/about'>
                         <Button primary
-                            className="ml-10 mt-10 px-6 font-mono about-section-more-btn"
+                            className="mt-10 px-6 font-mono about-section-more-btn"
                             onClick={handleClick}
                         >
                             More
