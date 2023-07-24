@@ -12,8 +12,13 @@ const BlogsSection = () => {
                         <RectImage
                             image="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg"
                             alt="something"
-                            width="300px"
-                            height="169px" // (width/16)*9 to follow 16:9 ratio
+                            // width="300px"
+                            // height="169px" // (width/16)*9 to follow 16:9 ratio
+                            dataType='w'
+                            width={300}
+                            dataUnit='px'
+                            aspectRatio={[16, 9]}
+                            background="transparent"
                         />
                     </div>
                     <div className=' w-72 border h-80' >
