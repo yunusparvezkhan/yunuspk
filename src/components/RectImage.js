@@ -1,23 +1,30 @@
 import React from 'react'
 
-//  The prop aspectRatio expects a array of two numbers being the aspect ratio of the frame
-//  w and h should be numbers and will be converted to whatever is passed in dataUnit
-const RectImage = ({ image, alt, width, height, dataType, dataUnit, w, h, aspectRatio }) => {
+//  *   The prop aspectRatio expects a array of two numbers being the aspect ratio of the frame
+//  *   w and h should be numbers and will be converted to 
+//      whatever is passed in dataUnit (do not provide % as 
+//      that will involve height of the parent div of this component)
+
+const RectImage = ({ image, alt, width, height, dataUnit, aspectRatio, background }) => {
     let finalWidth;
     let finalHeight;
 
-    if (dataType === 'w') {
-        finalHeight = (w / aspectRatio[0]) * aspectRatio[1];
-    } else if (dataType === 'h') {
-        finalWidth = (h / aspectRatio[1]) * aspectRatio[0];
+    if (width && !height) {
+        finalHeight = (width / aspectRatio[0]) * aspectRatio[1];
+    } else if (height && !width) {
+        finalWidth = (height / aspectRatio[1]) * aspectRatio[0];
+    } else if (width && height) {
+        finalWidth = width;
+        finalHeight = height;
     }
 
     return (
         <div>
             <div style={{
                 position: "relative",
-                width: `${width ? width : finalWidth + dataUnit}`,
-                height: `${height ? height : finalHeight + dataUnit}`,
+                width: `${finalWidth + dataUnit}`,
+                height: `${finalHeight + dataUnit}`,
+                backgroundColor: `${background}`,
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
             }} >
                 <img
