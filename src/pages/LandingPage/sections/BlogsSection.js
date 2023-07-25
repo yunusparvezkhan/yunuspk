@@ -2,6 +2,9 @@ import React from 'react';
 import '../styles/blogs-section.css'
 import RectImage from '../../../components/RectImage';
 import TextThumbnail from '../../../components/TextThumbnail';
+import Link from '../../../components/Link';
+import Button from '../../../components/Button';
+import { GiArmoredBoomerang } from 'react-icons/gi';
 
 const BlogsSection = () => {
 
@@ -68,10 +71,18 @@ const BlogsSection = () => {
     return (
         <div>
             <div className='flex flex-col items-center justify-between blogs-sec-container'>
-                <h1 className='text-5xl w-fit mb-10' >Blogs</h1>
-                <div className='|| dev-> mb-20 || flex flex-row items-center justify-between gap-5  blogs-sec-cards-container'>
+                <h1 className='text-5xl w-fit mb-20' >Blogs</h1>
+                <div className='flex flex-row items-center justify-between gap-5  blogs-sec-cards-container'>
                     {renderBlogsGridCard}
                 </div>
+                <Link to='/blogs'>
+                    <Button primary
+                        className="|| dev-> mb-20 || mt-20 px-6 font-mono rounded-lg"
+                    >
+                        More Blogs
+                        <GiArmoredBoomerang className='ml-2' />
+                    </Button>
+                </Link>
             </div>
         </div>
     )
