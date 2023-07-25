@@ -11,6 +11,7 @@ const BlogsSection = () => {
             alt: "something",
             title: "Blog no 1",
             subtitle: "25th July 2023 | Technology",
+            thumbnailTitle: "Blog Thumbnail Text",
             link: 'https://github.com/ypkorg/Pushing_into_states_in_React'
         },
         {
@@ -18,6 +19,7 @@ const BlogsSection = () => {
             alt: "something",
             title: "Blog no 2",
             subtitle: "25th July 2023 | Technology",
+            thumbnailTitle: "Blog Thumbnail Text",
             link: 'https://github.com/ypkorg/slice-method-in-js'
         },
         {
@@ -25,6 +27,7 @@ const BlogsSection = () => {
             alt: "something",
             title: "Blog no 3",
             subtitle: "25th July 2023 | Technology",
+            thumbnailTitle: "Blog Thumbnail Text",
             link: 'https://github.com/ypkorg/delta-commits-convention'
         }
     ]
@@ -45,7 +48,7 @@ const BlogsSection = () => {
                                     background="transparent"
                                 />
                                 : <TextThumbnail
-                                    title={blog.title}
+                                    title={blog.thumbnailTitle}
                                     width={300}
                                     dataUnit='px'
                                     aspectRatio={[16, 9]}
