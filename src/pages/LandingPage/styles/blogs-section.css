@@ -9,14 +9,17 @@
 }
 
 .blogs-section-card {
-    width: 300px;
-    min-height: 250px;
+    width: 330px;
+    min-height: 280px;
+    padding: 15px;
+    padding-top: 20px;
     transition: 0.3s;
 }
 
 .blogs-section-card:hover {
-    background-color: #FF705A;
-    padding: 10px;
+    background-color: #0E1F30;
+    padding-top: 15px;
+    padding-bottom: 20px;
 }
 
 .blogs-sec-card-rectimage {
