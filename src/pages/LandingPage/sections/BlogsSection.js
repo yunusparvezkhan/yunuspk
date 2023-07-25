@@ -10,35 +10,35 @@ const BlogsSection = () => {
 
     const blogsData = [
         {
-            // image: "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg",
-            alt: "something",
-            title: "Blog no 1",
-            subtitle: "25th July 2023 | Technology",
-            thumbnailTitle: "Blog Thumbnail Text",
+            image: "",
+            alt: "",
+            title: "Pushing into states in React",
+            subtitle: "11th May 2023 | ReactJS Programming",
+            thumbnailTitle: "Pushing into states in ReactJS",
             link: 'https://github.com/ypkorg/Pushing_into_states_in_React'
         },
         {
-            // image: "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg",
-            alt: "something",
-            title: "Blog no 2",
-            subtitle: "25th July 2023 | Technology",
-            thumbnailTitle: "Blog Thumbnail Text",
+            image: "",
+            alt: "",
+            title: "Slice Method in Javascript",
+            subtitle: "13th May 2023 | Javascript Programming",
+            thumbnailTitle: "Slice Method in JS",
             link: 'https://github.com/ypkorg/slice-method-in-js'
         },
         {
-            image: "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg",
-            alt: "something",
-            title: "Blog no 3",
-            subtitle: "25th July 2023 | Technology",
-            thumbnailTitle: "Blog Thumbnail Text",
-            link: 'https://github.com/ypkorg/delta-commits-convention'
+            image: "https://miro.medium.com/v2/resize:fit:720/0*v1o4-S6vNyVznnBY",
+            alt: "Jullian Assange",
+            title: "Imaginary Interview with the future of transparency, Julian Assange",
+            subtitle: "26th July 2023 | Cyber Security",
+            thumbnailTitle: "Cyber Security Do's & Don't's",
+            link: 'https://yunuspk.medium.com/imaginary-interview-with-the-future-of-transparency-julian-assange-714c5a251774'
         }
     ]
 
     const renderBlogsGridCard = blogsData.slice(0, 3).map((blog) => {
         return (
             <a href={blog.link} rel='noreferrer' target='_blank' key={blog.title}>
-                <div className='flex flex-col justify-between cursor-pointer  blogs-section-card' >
+                <div className='flex flex-col justify-between gap-7 cursor-pointer  blogs-section-card' >
                     <div className='blogs-sec-card-rectimage'>
                         {
                             blog.image ?
@@ -72,12 +72,12 @@ const BlogsSection = () => {
         <div>
             <div className='flex flex-col items-center justify-between blogs-sec-container'>
                 <h1 className='text-5xl w-fit mb-20' >Blogs</h1>
-                <div className='flex flex-row items-center justify-between gap-5  blogs-sec-cards-container'>
+                <div className='flex flex-row items-start justify-between gap-5  blogs-sec-cards-container'>
                     {renderBlogsGridCard}
                 </div>
                 <Link to='/blogs'>
                     <Button primary
-                        className="|| dev-> mb-20 || mt-20 px-6 font-mono rounded-lg"
+                        className="|| dev-> mb-20 || px-6 font-mono rounded-lg"
                     >
                         More Blogs
                         <GiArmoredBoomerang className='ml-2' />
