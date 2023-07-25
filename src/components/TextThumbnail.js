@@ -1,7 +1,7 @@
 import React from 'react'
 
 //  *   The prop aspectRatio expects a array of two numbers being the aspect ratio of the frame
-//  *   w and h should be numbers and will be converted to 
+//  *   width and height should be numbers and will be converted to 
 //      whatever is passed in dataUnit (do not provide % as 
 //      that will involve height of the parent div of this component)
 
