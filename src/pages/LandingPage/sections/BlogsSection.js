@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/blogs-section.css'
 import RectImage from '../../../components/RectImage';
+import TextThumbnail from '../../../components/TextThumbnail';
 
 const BlogsSection = () => {
 
@@ -55,7 +56,7 @@ const BlogsSection = () => {
         <div>
             <div className='flex flex-col items-center justify-between blogs-sec-container'>
                 <h1 className='text-5xl w-fit mb-10' >Blogs</h1>
-                <div className='border mb-10 flex flex-row items-center justify-between gap-5  blogs-sec-cards-container'>
+                <div className='|| dev-> mb-20 || flex flex-row items-center justify-between gap-5  blogs-sec-cards-container'>
                     {renderBlogsGridCard}
                 </div>
             </div>
