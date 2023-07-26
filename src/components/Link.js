@@ -29,6 +29,7 @@ const Link = ({ to, secondaryPath, children, ...rest }) => {
         }
         event.preventDefault();
         secondaryPath ? navigate(secondaryPath) : navigate(to);
+        window.scrollTo({ top: 0, left: 0 })
     }
 
     return (
