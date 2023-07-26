@@ -50,7 +50,7 @@ const BlogsSection = ({ blogsData }) => {
                 </div>
                 <Link to='/blogs'>
                     <Button primary
-                        className="|| dev-> mb-20 || px-6 font-mono rounded-lg"
+                        className="mb-52 px-6 font-mono rounded-lg"
                     >
                         More Blogs
                         <GiArmoredBoomerang className='ml-2' />
