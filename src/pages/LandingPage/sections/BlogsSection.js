@@ -10,20 +10,20 @@ const BlogsSection = () => {
 
     const blogsData = [
         {
+            image: "https://github.com/ypkorg/slice-method-in-js/raw/masterdoc/Slice%20method%202.png",
+            alt: "Slice Method in JS thumbnail",
+            title: "Slice Method in Javascript",
+            subtitle: "13th May 2023 | Javascript Programming",
+            thumbnailTitle: "Slice Method in JS",
+            link: 'https://github.com/ypkorg/slice-method-in-js'
+        },
+        {
             image: "",
             alt: "",
             title: "Pushing into states in React",
             subtitle: "11th May 2023 | ReactJS Programming",
             thumbnailTitle: "Pushing into states in ReactJS",
             link: 'https://github.com/ypkorg/Pushing_into_states_in_React'
-        },
-        {
-            image: "",
-            alt: "",
-            title: "Slice Method in Javascript",
-            subtitle: "13th May 2023 | Javascript Programming",
-            thumbnailTitle: "Slice Method in JS",
-            link: 'https://github.com/ypkorg/slice-method-in-js'
         },
         {
             image: "https://miro.medium.com/v2/resize:fit:720/0*v1o4-S6vNyVznnBY",
