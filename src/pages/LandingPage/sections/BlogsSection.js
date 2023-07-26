@@ -72,7 +72,7 @@ const BlogsSection = () => {
         <div>
             <div className='flex flex-col items-center justify-between blogs-sec-container'>
                 <h1 className='text-5xl w-fit mb-20' >Blogs</h1>
-                <div className='flex flex-row items-start justify-between gap-5  blogs-sec-cards-container'>
+                <div className='blogs-sec-cards-container'>
                     {renderBlogsGridCard}
                 </div>
                 <Link to='/blogs'>
