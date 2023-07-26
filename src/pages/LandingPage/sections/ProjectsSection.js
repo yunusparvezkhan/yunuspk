@@ -8,9 +8,9 @@ const ProjectsSection = ({ projectsData }) => {
     const renderProjectsList = projectsData.map((project, i) => {
         return (
             <div key={i} className='w-64 border' onClick={() => setActiveProject(i)} >
-                <h1 className='text-lg font-bold' >
+                <h3 className='text-lg font-bold' >
                     {project.title} <br></br>
-                </h1>
+                </h3>
                 {project.subtitle}
             </div>
         )
@@ -26,8 +26,12 @@ const ProjectsSection = ({ projectsData }) => {
                     {renderProjectsList}
                 </div>
                 {/* Create a component for rendering a a function as recieved in a object */}
-                <div className='border'>
-                    {projectsData[activeProject].body()}
+                <div className='border w-full'>
+                    <h2 className='text-2xl font-bold px-10 pt-10 pb-3'>{projectsData[activeProject].title}</h2>
+                    <hr className='mx-10' ></hr>
+                    <div className='pl-10 p-5' >
+                        {projectsData[activeProject].body()}
+                    </div>
                 </div>
             </div>
         </div>
