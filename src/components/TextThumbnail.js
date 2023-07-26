@@ -34,6 +34,7 @@ const TextThumbnail = ({ title, width, height, dataUnit, aspectRatio, background
                         position: "relative",
                         textAlign: "center",
                         fontFamily: "serif",
+                        padding: "5%",
                         top: "50%",
                         transform: "translate(0, -50%"
                     }}
