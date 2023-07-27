@@ -4,45 +4,16 @@ import IntroSection from './sections/IntroSection';
 import AboutSection from './sections/AboutSection';
 import './styles/landingpage.css'
 import BlogsSection from './sections/BlogsSection';
-import blogsData from './data/blogsData.json'
 import ProjectsSection from './sections/ProjectsSection';
+
+import blogsData from './data/blogsData.json'
+import { projectsData } from './data/projectsData';
 
 const LandingPage = () => {
 
 	const { images, paragraph } = useSelector((state) => {
 		return state.about;
 	})
-
-	const projectsData = [
-		{
-			id: "1",
-			title: "Delta__108_sigma_006",
-			pathName: "delta__108_sigma_006",
-			subtitle: `Lorem Ipsum is a dummy text model that can be 
-			used in any kind of paragraph examples.Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.`,
-			body: () => {
-				return (
-					<div>
-						<h2>Hello from project component 1</h2>
-					</div>
-				)
-			}
-		},
-		{
-			id: "2",
-			title: "rho_tifi",
-			pathName: "rho_tifi",
-			subtitle: `Lorem Ipsum is a dummy text model that can be 
-			used in any kind of paragraph examples.Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.`,
-			body: () => {
-				return (
-					<div>
-						<h2>Hello from project component 2</h2>
-					</div>
-				)
-			}
-		}
-	]
 
 	return (
 		<div className='landing-page text-white' >
