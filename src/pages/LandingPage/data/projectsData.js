@@ -5,13 +5,7 @@ export const projectsData = [
         pathName: "delta__108_sigma_006",
         subtitle: `Lorem Ipsum is a dummy text model that can be 
         used in any kind of paragraph examples.Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.`,
-        body: () => {
-            return (
-                <div>
-                    <h2>Hello from project component 1</h2>
-                </div>
-            )
-        }
+        body: <div><h2>Hello from project component 1</h2></div>
     },
     {
         id: "2",
@@ -19,13 +13,7 @@ export const projectsData = [
         pathName: "rho_tifi",
         subtitle: `Lorem Ipsum is a dummy text model that can be 
         used in any kind of paragraph examples.Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.`,
-        body: () => {
-            return (
-                <div>
-                    <h2>Hello from project component 2</h2>
-                </div>
-            )
-        }
+        body: <div><h2>Hello from project component 2</h2></div>
     },
     {
         id: "3",
@@ -33,13 +21,7 @@ export const projectsData = [
         pathName: "project-arya",
         subtitle: `Lorem Ipsum is a dummy text model that can be 
         used in any kind of paragraph examples.Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.`,
-        body: () => {
-            return (
-                <div>
-                    <h2>Hello from project Arya</h2>
-                </div>
-            )
-        }
+        body: <div><h2>Hello from project Arya</h2></div>
     },
     {
         id: "4",
@@ -47,13 +29,7 @@ export const projectsData = [
         pathName: "mamba-33",
         subtitle: `Lorem Ipsum is a dummy text model that can be 
         used in any kind of paragraph examples.Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.`,
-        body: () => {
-            return (
-                <div>
-                    <h2>Hello from project Mamba 33</h2>
-                </div>
-            )
-        }
+        body: <div><h2>Hello from project Mamba 33</h2></div>
     },
     {
         id: "5",
@@ -61,13 +37,7 @@ export const projectsData = [
         pathName: "mamba-11",
         subtitle: `Lorem Ipsum is a dummy text model that can be 
         used in any kind of paragraph examples.Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.`,
-        body: () => {
-            return (
-                <div>
-                    <h2>Hello from project Mamba 11</h2>
-                </div>
-            )
-        }
+        body: <div><h2>Hello from project Mamba 11</h2></div>
     },
     {
         id: "6",
@@ -75,13 +45,7 @@ export const projectsData = [
         pathName: "bravo-whiskey-6",
         subtitle: `Lorem Ipsum is a dummy text model that can be 
         used in any kind of paragraph examples.Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.`,
-        body: () => {
-            return (
-                <div>
-                    <h2>Hello from project bravo-whiskey-6 </h2>
-                </div>
-            )
-        }
+        body: <div><h2>Hello from project bravo-whiskey-6 </h2></div>
     },
     {
         id: "7",
@@ -89,12 +53,6 @@ export const projectsData = [
         pathName: "yunuspk",
         subtitle: `Lorem Ipsum is a dummy text model that can be 
         used in any kind of paragraph examples.Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.`,
-        body: () => {
-            return (
-                <div>
-                    <h2>Hello from project Yunus PK</h2>
-                </div>
-            )
-        }
+        body: <div><h2>Hello from project Yunus PK</h2></div>
     }
 ]
