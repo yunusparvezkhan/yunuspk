@@ -6,7 +6,6 @@ import { LandingPage, AboutPage, BlogsPage, ProjectsPage, AchievementsPage, Acad
 function App() {
   return (
     <div className="App">
-      <NavBar />
       <Route path='/home' secondaryPath='/' >
         <LandingPage />
       </Route>
@@ -38,6 +37,11 @@ function App() {
       <Route path='/contact'>
         <ContactsPage />
       </Route>
+
+      <div className="fixed w-full top-0" >
+        <NavBar className="fixed" />
+      </div>
+
     </div>
   );
 }
