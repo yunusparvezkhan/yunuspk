@@ -46,3 +46,25 @@
 .transition-0p1 {
     transition: 0.1s;
 }
+
+/* Scroll Bars */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1A2734;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #303B47;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
