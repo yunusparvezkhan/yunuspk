@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Link from '../../../components/Link'
+import { FiExternalLink } from 'react-icons/fi'
 import '../styles/projects-section.css'
 
 // This component expects the `projectsData` prop to be an array of objects
@@ -27,7 +29,12 @@ const ProjectsSection = ({ projectsData }) => {
                 </div>
                 {/* Create a component for rendering a a function as recieved in a object */}
                 <div className='border w-full'>
-                    <h2 className='text-2xl font-bold px-10 pt-10 pb-3'>{projectsData[activeProject].title}</h2>
+                    <div className='flex flex-row items-center justify-between' >
+                        <h2 className='text-2xl font-bold px-10 pt-10 pb-3'>{projectsData[activeProject].title}</h2>
+                        <div className='px-10 pt-10 pb-3 cursor-pointer hover:text-green-400 transition-0p1' >
+                            <FiExternalLink />
+                        </div>
+                    </div>
                     <hr className='mx-10' ></hr>
                     <div className='pl-10 p-5' >
                         {projectsData[activeProject].body()}

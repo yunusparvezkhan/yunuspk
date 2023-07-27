@@ -42,3 +42,7 @@
 .w-90per {
     width: 90%;
 }
+
+.transition-0p1 {
+    transition: 0.1s;
+}
