@@ -26,7 +26,6 @@ const ProjectsSection = ({ projectsData }) => {
         )
     })
 
-
     return (
         <div className='flex flex-col items-center  projects-sec' >
             <h1 className='text-5xl w-fit mb-20' >Projects</h1>
