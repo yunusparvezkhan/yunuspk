@@ -32,7 +32,9 @@ const ProjectsSection = ({ projectsData }) => {
                     <div className='flex flex-row items-center justify-between' >
                         <h2 className='text-2xl font-bold px-10 pt-10 pb-3'>{projectsData[activeProject].title}</h2>
                         <div className='px-10 pt-10 pb-3 cursor-pointer hover:text-green-400 transition-0p1' >
-                            <FiExternalLink />
+                            <Link to={`/projects/${projectsData[activeProject].pathName}`}>
+                                <FiExternalLink />
+                            </Link>
                         </div>
                     </div>
                     <hr className='mx-10' ></hr>

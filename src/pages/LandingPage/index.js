@@ -17,6 +17,7 @@ const LandingPage = () => {
 		{
 			id: "1",
 			title: "Delta__108_sigma_006",
+			pathName: "delta__108_sigma_006",
 			subtitle: `Lorem Ipsum is a dummy text model that can be 
 			used in any kind of paragraph examples.Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.`,
 			body: () => {
@@ -30,6 +31,7 @@ const LandingPage = () => {
 		{
 			id: "2",
 			title: "rho_tifi",
+			pathName: "rho_tifi",
 			subtitle: `Lorem Ipsum is a dummy text model that can be 
 			used in any kind of paragraph examples.Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.`,
 			body: () => {
