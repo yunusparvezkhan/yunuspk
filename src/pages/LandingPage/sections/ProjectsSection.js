@@ -2,17 +2,42 @@ import React, { useState } from 'react';
 import Link from '../../../components/Link'
 import { FiExternalLink } from 'react-icons/fi'
 import '../styles/projects-section.css'
+import { useLink } from '../../../hooks/use-link';
 
 // This component expects the `projectsData` prop to be an array of objects
 const ProjectsSection = ({ projectsData }) => {
     const [activeProject, setActiveProject] = useState(0);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 800 ? true : false);
+    const navigate = useLink();
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 800) {
+            setIsSmallScreen(false);
+        } else if (window.innerWidth < 800) {
+            setIsSmallScreen(true);
+        }
+    }, true)
+
+    const handleProjectsCardClick = (projectIndex, event) => {
+        if (isSmallScreen) {
+            if (event.ctrlKey || event.metaKey) {
+                window.open(`/projects/${projectsData[projectIndex].pathName}`);
+                return;
+            }
+            event.preventDefault();
+            navigate(`/projects/${projectsData[projectIndex].pathName}`);
+            window.scrollTo({ top: 0, left: 0 })
+        } else if (!isSmallScreen) {
+            setActiveProject(projectIndex)
+        }
+    }
 
     const renderProjectsList = projectsData.map((project, i) => {
         return (
             <div key={i} className='projects-sec-card-container'
-                onClick={() => setActiveProject(i)}
+                onClick={(event) => handleProjectsCardClick(i, event)}
                 style={{
-                    backgroundColor: activeProject === i ? "#252F39" : "transparent",
+                    backgroundColor: activeProject === i && !isSmallScreen ? "#252F39" : "transparent",
                     width: "calc(100% + 1px)",
                 }}
             >
@@ -35,8 +60,8 @@ const ProjectsSection = ({ projectsData }) => {
                     {renderProjectsList}
                 </div>
                 {/* Create a component for rendering a a function as recieved in a object */}
-                <div className=' w-full'>
-                    <div className='flex flex-row items-center justify-between' >
+                <div className=' w-full  projects-sec-preview-panel'>
+                    <div className='flex flex-row items-center justify-between ' >
                         <h2 className='text-2xl font-bold px-10 pt-10 pb-3'>{projectsData[activeProject].title}</h2>
                         <div className='px-10 pt-10 pb-3 cursor-pointer hover:text-green-400 transition-0p1' >
                             <Link to={`/projects/${projectsData[activeProject].pathName}`}>

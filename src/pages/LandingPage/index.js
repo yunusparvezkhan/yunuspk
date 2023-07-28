@@ -7,8 +7,7 @@ import BlogsSection from './sections/BlogsSection';
 import ProjectsSection from './sections/ProjectsSection';
 
 import blogsData from './data/blogsData.json'
-// import { projectsData } from './data/projectsData';
-import projectsData from './data/projectsData.archive.json';
+import projectsData from './data/projectsData';
 
 const LandingPage = () => {
 
