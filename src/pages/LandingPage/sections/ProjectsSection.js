@@ -46,7 +46,7 @@ const ProjectsSection = ({ projectsData }) => {
                     </div>
                     <hr className='mx-10' ></hr>
                     <div className='pl-10 p-5' >
-                        {projectsData[activeProject].body}
+                        <div dangerouslySetInnerHTML={{ __html: projectsData[activeProject].body }} />
                     </div>
                 </div>
             </div>
