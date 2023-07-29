@@ -33,7 +33,7 @@ const Link = ({ to, secondaryPath, children, ...rest }) => {
     }
 
     return (
-        <a  {...rest} key={to} onClick={handleClick} >
+        <a  {...rest} key={to} href={to} onClick={handleClick} >
             {children}
         </a>
     )
