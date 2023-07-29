@@ -3,6 +3,8 @@ import Link from '../../../components/Link'
 import { FiExternalLink } from 'react-icons/fi'
 import '../styles/projects-section.css'
 import { useLink } from '../../../hooks/use-link';
+import Button from '../../../components/Button';
+import { GiArmoredBoomerang } from 'react-icons/gi';
 
 // This component expects the `projectsData` prop to be an array of objects
 const ProjectsSection = ({ projectsData }) => {
@@ -54,7 +56,7 @@ const ProjectsSection = ({ projectsData }) => {
     return (
         <div className='flex flex-col items-center  projects-sec' >
             <h1 className='text-5xl w-fit mb-20' >Projects</h1>
-            <div className='  projects-sec-container flex flex-row' >
+            <div className='projects-sec-container flex flex-row mb-20' >
                 {/* Create a component for listing out the projects */}
                 <div className='projects-sec-cards-panel flex flex-col cursor-pointer' >
                     {renderProjectsList}
@@ -75,6 +77,14 @@ const ProjectsSection = ({ projectsData }) => {
                     </div>
                 </div>
             </div>
+            <Link to='/projects'>
+                <Button primary
+                    className="mb-52 px-6 font-mono rounded-lg"
+                >
+                    Projects Page
+                    <GiArmoredBoomerang className='ml-2' />
+                </Button>
+            </Link>
         </div>
     )
 }
