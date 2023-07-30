@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 import Link from './Link';
@@ -6,6 +6,7 @@ import { links } from '../data/navbar-links';
 import './styles/navbar.css'
 
 const NavBar = () => {
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 800 ? true : false);
     const { activePage } = useSelector((state) => {
         return state.navigation;
     })
@@ -29,19 +30,34 @@ const NavBar = () => {
         )
     });
 
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1100) {
+            setIsSmallScreen(false);
+        } else if (window.innerWidth < 1100) {
+            setIsSmallScreen(true);
+        }
+    }, true)
 
-    return (
-        <div className=' nav-bar flex flex-row items-center justify-between text-white' >
-            <h1 className='text-3xl font-thin ml-10'>YunusPK</h1>
-            <div className='flex flex-row items-center gap-2'>
-                {renderNavBtns}
+    if (isSmallScreen) {
+        return (
+            <div>
+                Small Screen detected
             </div>
-            <div className='mr-10 bg-gray-800 h-9 flex flex-row items-center p-2' >
-                <input className='bg-transparent border-none outline-none' placeholder='Search...' />
-                <BsSearch className='cursor-pointer' />
+        )
+    } else {
+        return (
+            <div className=' nav-bar flex flex-row items-center justify-between text-white' >
+                <h1 className='text-3xl font-thin ml-10'>YunusPK</h1>
+                <div className='flex flex-row items-center gap-2'>
+                    {renderNavBtns}
+                </div>
+                <div className='mr-10 bg-gray-800 h-9 flex flex-row items-center p-2' >
+                    <input className='bg-transparent border-none outline-none' placeholder='Search...' />
+                    <BsSearch className='cursor-pointer' />
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default NavBar
