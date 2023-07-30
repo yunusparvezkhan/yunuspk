@@ -6,7 +6,7 @@ import './styles/navbar.css'
 
 import { BsSearch } from 'react-icons/bs';
 import { IoMenu } from 'react-icons/io5'
-import Button from './Button';
+import { AiOutlineClose } from 'react-icons/ai'
 
 const NavBar = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1100 ? true : false);
@@ -69,7 +69,9 @@ const NavBar = () => {
                     {
                         isMenuActive &&
                         <div className='nav-menu fixed w-4/5 text-white' >
-                            <Button danger onClick={handleMenuCloseClick}>x</Button>
+                            <button onClick={handleMenuCloseClick} className="nav-menu-close-btn absolute top-3 right-3 p-3 transition duration-300">
+                                <AiOutlineClose />
+                            </button>
                             Hello from the popup menu
                         </div>
 

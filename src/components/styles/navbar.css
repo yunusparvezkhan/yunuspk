@@ -16,3 +16,7 @@
     height: 100vh;
     background-color: #2A3646;
 }
+
+.nav-menu-close-btn:hover {
+    background-color: #20272E;
+}
