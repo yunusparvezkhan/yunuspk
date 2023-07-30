@@ -68,12 +68,14 @@ const NavBar = () => {
                 <div className='nav-menu-container' >
                     {
                         isMenuActive &&
-                        <div className='nav-menu fixed w-4/5 text-white' >
-                            <button onClick={handleMenuCloseClick} className="nav-menu-close-btn absolute top-3 right-3 p-3 transition duration-300">
-                                <AiOutlineClose />
-                            </button>
-                            <div className='nav-menu-branding' >
-                                <h1 className='text-3xl font-thin absolute top-3 ttf'>YunusPK</h1>
+                        <div className='nav-menu fixed w-4/5 text-white justify-between' >
+                            <div className='nav-menu-header flex flex-row items-center justify-between ' >
+                                <div className='nav-menu-branding' >
+                                    <h1 className='text-3xl font-thin ml-6 '>YunusPK</h1>
+                                </div>
+                                <button onClick={handleMenuCloseClick} className="nav-menu-close-btn p-3 mr-3 transition duration-300">
+                                    <AiOutlineClose />
+                                </button>
                             </div>
                             <div className='nav-menu-contents'>
                                 Hello from the popup menu
