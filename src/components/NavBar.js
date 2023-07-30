@@ -23,14 +23,18 @@ const NavBar = () => {
 
     const renderNavBtns = links.map((link) => {
         return (
-            <Link
-                to={link.path}
-                secondaryPath={link.secondaryPath}
-                className={'px-2 py-1 hover:bg-gray-800 cursor-pointer ' + stylefunc(link.path) + ' ' + stylefunc(link.secondaryPath)}
+            <div
                 key={link.path}
+                onClick={() => setIsMenuActive(false)}
+                className={isMenuActive ? 'w-full py-2 pl-7 hover:bg-gray-800 cursor-pointer ' : 'px-2 py-1 hover:bg-gray-800 cursor-pointer ' + stylefunc(link.path) + ' ' + stylefunc(link.secondaryPath)}
             >
-                {link.title}
-            </Link>
+                <Link
+                    to={link.path}
+                    secondaryPath={link.secondaryPath}
+                >
+                    {link.title}
+                </Link>
+            </div>
         )
     });
 
@@ -77,8 +81,8 @@ const NavBar = () => {
                                     <AiOutlineClose />
                                 </button>
                             </div>
-                            <div className='nav-menu-contents'>
-                                Hello from the popup menu
+                            <div className='nav-menu-contents flex flex-col items-start justify-between'>
+                                {renderNavBtns}
                             </div>
                         </div>
 
