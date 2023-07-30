@@ -72,7 +72,12 @@ const NavBar = () => {
                             <button onClick={handleMenuCloseClick} className="nav-menu-close-btn absolute top-3 right-3 p-3 transition duration-300">
                                 <AiOutlineClose />
                             </button>
-                            Hello from the popup menu
+                            <div className='nav-menu-branding' >
+                                <h1 className='text-3xl font-thin absolute top-3 ttf'>YunusPK</h1>
+                            </div>
+                            <div className='nav-menu-contents'>
+                                Hello from the popup menu
+                            </div>
                         </div>
 
                     }
