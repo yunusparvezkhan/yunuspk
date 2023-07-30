@@ -11,8 +11,6 @@
 }
 
 .nav-menu {
-    position: fixed;
-    width: 80%;
     max-width: 400px;
     min-width: 200px;
     height: 100vh;

@@ -68,7 +68,7 @@ const NavBar = () => {
                 <div className='nav-menu-container' >
                     {
                         isMenuActive &&
-                        <div className='nav-menu' >
+                        <div className='nav-menu fixed w-4/5 text-white' >
                             <Button danger onClick={handleMenuCloseClick}>x</Button>
                             Hello from the popup menu
                         </div>
