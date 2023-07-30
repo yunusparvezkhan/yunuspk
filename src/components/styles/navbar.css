@@ -3,3 +3,18 @@
     width: full;
     height: 60px;
 }
+
+.nav-menu-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 80%;
+    max-width: 400px;
+    min-width: 200px;
+    height: 100vh;
+    background-color: #2A3646;
+}

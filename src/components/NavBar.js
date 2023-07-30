@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import { BsSearch } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 import Link from './Link';
 import { links } from '../data/navbar-links';
 import './styles/navbar.css'
 
+import { BsSearch } from 'react-icons/bs';
+import { IoMenu } from 'react-icons/io5'
+import Button from './Button';
+
 const NavBar = () => {
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 800 ? true : false);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1100 ? true : false);
+    const [isMenuActive, setIsMenuActive] = useState(false);
     const { activePage } = useSelector((state) => {
         return state.navigation;
     })
@@ -38,10 +42,39 @@ const NavBar = () => {
         }
     }, true)
 
+    const handleMenuClick = () => {
+        // pop up menu section
+        setIsMenuActive(true);
+    }
+
+    const handleMenuCloseClick = () => {
+        // Close the menu
+        setIsMenuActive(false)
+    }
+
     if (isSmallScreen) {
         return (
             <div>
-                Small Screen detected
+                <div className='nav-bar flex flex-row items-center justify-between text-white' >
+                    <div className='text-4xl ml-8 cursor-pointer' onClick={handleMenuClick} >
+                        <IoMenu />
+                    </div>
+                    <h1 className='text-3xl font-thin ml-10'>YunusPK</h1>
+                    <div className='mr-10 bg-gray-800 h-9 flex flex-row items-center p-2' >
+                        <input className='bg-transparent border-none outline-none' placeholder='Search...' />
+                        <BsSearch className='cursor-pointer' />
+                    </div>
+                </div>
+                <div className='nav-menu-container' >
+                    {
+                        isMenuActive &&
+                        <div className='nav-menu' >
+                            <Button danger onClick={handleMenuCloseClick}>x</Button>
+                            Hello from the popup menu
+                        </div>
+
+                    }
+                </div>
             </div>
         )
     } else {
