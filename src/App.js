@@ -6,6 +6,7 @@ import { LandingPage, AboutPage, BlogsPage, ProjectsPage, AchievementsPage, Acad
 function App() {
   return (
     <div className="App">
+      <div className="h-60px" />
       <Route path='/home' secondaryPath='/' >
         <LandingPage />
       </Route>
