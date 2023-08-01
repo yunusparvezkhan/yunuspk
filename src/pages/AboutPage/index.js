@@ -5,7 +5,7 @@ const AboutPage = () => {
     return (
         <div>
             AboutPage
-            <UnderDevNotifier />
+            <UnderDevNotifier animationHeight="300px" />
         </div>
     )
 }
