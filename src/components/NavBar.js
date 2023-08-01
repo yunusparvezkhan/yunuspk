@@ -65,6 +65,29 @@ const NavBar = () => {
         setSearchBarActiveSts(!searchBarActiveSts);
     }
 
+    const navMenu =
+        <>
+            <div className='nav-menu-container' >
+                {
+                    isMenuActive &&
+                    <div className='nav-menu fixed w-4/5 text-white justify-between' >
+                        <div className='nav-menu-header flex flex-row items-center justify-between ' >
+                            <div className='nav-menu-branding' >
+                                <h1 className='text-3xl font-thin ml-6 '>YunusPK</h1>
+                            </div>
+                            <button onClick={handleMenuCloseClick} className="nav-menu-close-btn p-3 mr-3 transition duration-300">
+                                <AiOutlineClose />
+                            </button>
+                        </div>
+                        <div className='nav-menu-contents flex flex-col items-start justify-between'>
+                            {renderNavBtns}
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </>
+
     if (screenWidthSts === 'alpha') {
         return (
             <div className=' nav-bar flex flex-row items-center justify-between text-white' >
@@ -91,25 +114,10 @@ const NavBar = () => {
                         <BsSearch className='cursor-pointer' />
                     </div>
                 </div>
-                <div className='nav-menu-container' >
-                    {
-                        isMenuActive &&
-                        <div className='nav-menu fixed w-4/5 text-white justify-between' >
-                            <div className='nav-menu-header flex flex-row items-center justify-between ' >
-                                <div className='nav-menu-branding' >
-                                    <h1 className='text-3xl font-thin ml-6 '>YunusPK</h1>
-                                </div>
-                                <button onClick={handleMenuCloseClick} className="nav-menu-close-btn p-3 mr-3 transition duration-300">
-                                    <AiOutlineClose />
-                                </button>
-                            </div>
-                            <div className='nav-menu-contents flex flex-col items-start justify-between'>
-                                {renderNavBtns}
-                            </div>
-                        </div>
-
-                    }
+                <div className='hidden'>
+                    {renderNavBtns}
                 </div>
+                {navMenu}
             </div>
         )
     } else if (screenWidthSts === 'gamma') {
@@ -135,25 +143,10 @@ const NavBar = () => {
                         }
                     </div>
                 </div>
-                <div className='nav-menu-container' >
-                    {
-                        isMenuActive &&
-                        <div className='nav-menu fixed w-4/5 text-white justify-between' >
-                            <div className='nav-menu-header flex flex-row items-center justify-between ' >
-                                <div className='nav-menu-branding' >
-                                    <h1 className='text-3xl font-thin ml-6 '>YunusPK</h1>
-                                </div>
-                                <button onClick={handleMenuCloseClick} className="nav-menu-close-btn p-3 mr-3 transition duration-300">
-                                    <AiOutlineClose />
-                                </button>
-                            </div>
-                            <div className='nav-menu-contents flex flex-col items-start justify-between'>
-                                {renderNavBtns}
-                            </div>
-                        </div>
-
-                    }
+                <div className='hidden'>
+                    {renderNavBtns}
                 </div>
+                {navMenu}
             </div>
         )
     }
