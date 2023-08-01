@@ -11,8 +11,6 @@ import projectsData from './data/projectsData';
 
 const LandingPage = () => {
 
-	console.log('landing page on the board')
-
 	const { images, paragraph } = useSelector((state) => {
 		return state.about;
 	})

@@ -83,7 +83,6 @@ const NavBar = () => {
                             {renderNavBtns}
                         </div>
                     </div>
-
                 }
             </div>
         </>
