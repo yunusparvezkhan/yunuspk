@@ -10,6 +10,10 @@ function App() {
         <LandingPage />
       </Route>
 
+      <Route path='' >
+        <LandingPage />
+      </Route>
+
       <Route path='/about'>
         <AboutPage />
       </Route>

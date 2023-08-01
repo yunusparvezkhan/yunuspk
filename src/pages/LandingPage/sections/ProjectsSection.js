@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Link from '../../../components/Link'
 import { FiExternalLink } from 'react-icons/fi'
 import '../styles/projects-section.css'
-import { useLink } from '../../../hooks/use-link';
 import Button from '../../../components/Button';
 import { GiArmoredBoomerang } from 'react-icons/gi';
 
@@ -10,7 +9,6 @@ import { GiArmoredBoomerang } from 'react-icons/gi';
 const ProjectsSection = ({ projectsData }) => {
     const [activeProject, setActiveProject] = useState(0);
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 800 ? true : false);
-    const navigate = useLink();
 
     window.addEventListener("resize", () => {
         if (window.innerWidth >= 800) {
@@ -21,21 +19,12 @@ const ProjectsSection = ({ projectsData }) => {
     }, true)
 
     const handleProjectsCardClick = (projectIndex, event) => {
-        if (isSmallScreen) {
-            if (event.ctrlKey || event.metaKey) {
-                window.open(`/projects/${projectsData[projectIndex].pathName}`);
-                return;
-            }
-            event.preventDefault();
-            navigate(`/projects/${projectsData[projectIndex].pathName}`);
-            window.scrollTo({ top: 0, left: 0 })
-        } else if (!isSmallScreen) {
-            setActiveProject(projectIndex)
-        }
+        setActiveProject(projectIndex)
     }
 
     const renderProjectsList = projectsData.map((project, i) => {
-        return (
+
+        const cards =
             <div key={i} className='projects-sec-card-container'
                 onClick={(event) => handleProjectsCardClick(i, event)}
                 style={{
@@ -50,7 +39,16 @@ const ProjectsSection = ({ projectsData }) => {
                     {project.subtitle.trim().slice(0, 85) + "..."}
                 </p>
             </div>
-        )
+
+        if (isSmallScreen) {
+            return (
+                <Link key={i} to={`/projects/${projectsData[i].pathName}`}>
+                    {cards}
+                </Link>
+            )
+        } else {
+            return cards;
+        }
     })
 
     return (
