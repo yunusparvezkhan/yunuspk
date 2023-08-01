@@ -5,8 +5,6 @@ const AboutPage = () => {
     return (
         <div>
             AboutPage
-            <br ></br>
-            <br ></br>
             <UnderDevNotifier />
         </div>
     )
