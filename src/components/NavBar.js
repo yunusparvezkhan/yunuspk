@@ -11,6 +11,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 const NavBar = () => {
     const [screenWidthSts, setScreenWidthSts] = useState(window.innerWidth > 1100 ? 'alpha' : window.innerWidth > 600 ? 'beta' : 'gamma');
     const [isMenuActive, setIsMenuActive] = useState(false);
+    const [searchBarActiveSts, setSearchBarActiveSts] = useState(false);
     const { activePage } = useSelector((state) => {
         return state.navigation;
     })
@@ -58,6 +59,10 @@ const NavBar = () => {
     const handleMenuCloseClick = () => {
         // Close the menu
         setIsMenuActive(false)
+    }
+
+    const handleSearchBarStsToggle = () => {
+        setSearchBarActiveSts(!searchBarActiveSts);
     }
 
     if (screenWidthSts === 'alpha') {
@@ -110,7 +115,45 @@ const NavBar = () => {
     } else if (screenWidthSts === 'gamma') {
         return (
             <div>
-                Gamma NavBar
+                <div className='nav-bar flex flex-row items-center justify-between text-white' >
+                    <div className='text-4xl ml-8 cursor-pointer' onClick={handleMenuClick} >
+                        <IoMenu />
+                    </div>
+                    {
+                        searchBarActiveSts ?
+                            <div className='bg-gray-800 h-9 flex flex-row items-center p-2' >
+                                <input className='bg-transparent border-none outline-none' placeholder='Search...' />
+                                <BsSearch className='cursor-pointer' />
+                            </div>
+                            : <h1 className='text-3xl font-thin'>YunusPK</h1>
+                    }
+                    <div onClick={handleSearchBarStsToggle} className='mr-10 bg-gray-800 h-9 flex flex-row items-center py-2 px-3 cursor-pointer'>
+                        {
+                            searchBarActiveSts ?
+                                <AiOutlineClose />
+                                : <BsSearch />
+                        }
+                    </div>
+                </div>
+                <div className='nav-menu-container' >
+                    {
+                        isMenuActive &&
+                        <div className='nav-menu fixed w-4/5 text-white justify-between' >
+                            <div className='nav-menu-header flex flex-row items-center justify-between ' >
+                                <div className='nav-menu-branding' >
+                                    <h1 className='text-3xl font-thin ml-6 '>YunusPK</h1>
+                                </div>
+                                <button onClick={handleMenuCloseClick} className="nav-menu-close-btn p-3 mr-3 transition duration-300">
+                                    <AiOutlineClose />
+                                </button>
+                            </div>
+                            <div className='nav-menu-contents flex flex-col items-start justify-between'>
+                                {renderNavBtns}
+                            </div>
+                        </div>
+
+                    }
+                </div>
             </div>
         )
     }
