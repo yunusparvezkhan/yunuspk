@@ -1,3 +1,7 @@
+.projects-sec * {
+    transition: 0.3s;
+}
+
 .projects-sec {
     position: relative;
 }
@@ -16,24 +20,23 @@
 
 .projects-sec-cards-panel {
     width: 40%;
-    /* border-right: 1px solid #a9a9a9; */
     overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-.projects-sec-card-container {
+.projects-sec-card {
     width: 100%;
     padding: 20px;
     padding-right: 40px;
 }
 
-.projects-sec-card-container h3 {
+.projects-sec-card h3 {
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-.projects-sec-card-container p {
+.projects-sec-card p {
     font-size: 11px;
     color: #b9b9b9;
 }

@@ -9,6 +9,7 @@ import { GiArmoredBoomerang } from 'react-icons/gi';
 const ProjectsSection = ({ projectsData }) => {
     const [activeProject, setActiveProject] = useState(0);
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 800 ? true : false);
+    const [hoveredCard, setHoveredCard] = useState(null);
 
     window.addEventListener("resize", () => {
         if (window.innerWidth >= 800) {
@@ -25,12 +26,15 @@ const ProjectsSection = ({ projectsData }) => {
     const renderProjectsList = projectsData.map((project, i) => {
 
         const cards =
-            <div key={i} className='projects-sec-card-container'
+            <div key={i}
+                className='projects-sec-card'
                 onClick={(event) => handleProjectsCardClick(i, event)}
                 style={{
-                    backgroundColor: activeProject === i && !isSmallScreen ? "#252F39" : "transparent",
+                    backgroundColor: activeProject === i && !isSmallScreen ? "#252F39" : hoveredCard === i ? "#1C3251" : "transparent",
                     width: "calc(100% + 1px)",
                 }}
+                onMouseEnter={() => setHoveredCard(i)}
+                onMouseLeave={() => setHoveredCard(null)}
             >
                 <h3>
                     {project.title}
