@@ -1,8 +1,12 @@
 import React from 'react'
+import UnderDevNotifier from '../../components/UnderDevNotifier';
 
 const ContactsPage = () => {
     return (
-        <div>ContactPage</div>
+        <div>
+            ContactPage
+            <UnderDevNotifier animationHeight="300px" />
+        </div>
     )
 }
 

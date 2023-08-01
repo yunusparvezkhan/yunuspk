@@ -1,8 +1,12 @@
 import React from 'react'
+import UnderDevNotifier from '../../components/UnderDevNotifier'
 
 const BlogsPage = () => {
     return (
-        <div>BlogsPage</div>
+        <div>
+            BlogsPage
+            <UnderDevNotifier animationHeight="300px" />
+        </div>
     )
 }
 
