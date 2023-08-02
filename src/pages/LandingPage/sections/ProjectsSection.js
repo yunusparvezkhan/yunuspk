@@ -46,9 +46,9 @@ const ProjectsSection = ({ projectsData }) => {
 
         if (isSmallScreen) {
             return (
-                <Link key={i} to={`/projects/${projectsData[i].pathName}`}>
+                <a key={i} href={projectsData[i].url}>
                     {cards}
-                </Link>
+                </a>
             )
         } else {
             return cards;
@@ -68,9 +68,9 @@ const ProjectsSection = ({ projectsData }) => {
                     <div className='flex flex-row items-center justify-between ' >
                         <h2 className='text-2xl font-bold px-10 pt-10 pb-3'>{projectsData[activeProject].title}</h2>
                         <div className='px-10 pt-10 pb-3 cursor-pointer hover:text-green-400 transition-0p1' >
-                            <Link to={`/projects/${projectsData[activeProject].pathName}`}>
+                            <a href={projectsData[activeProject].url}>
                                 <FiExternalLink />
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     <hr className='mx-10' ></hr>
