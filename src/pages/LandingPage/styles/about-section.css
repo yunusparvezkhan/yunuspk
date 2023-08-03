@@ -74,3 +74,12 @@
         margin-left: 0;
     }
 }
+
+@media(max-width:470px) {
+
+    .about-section-content p {
+        width: 310px;
+        margin-left: 0;
+    }
+
+}
