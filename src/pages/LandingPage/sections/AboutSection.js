@@ -13,7 +13,7 @@ const AboutSection = ({ image, alt, bgcolor, borderColor, paragraph }) => {
     }
 
     return (
-        <div className='w-3/4 relative left-1/2 ttf about-section' >
+        <div className='relative left-1/2 ttf about-section' >
             <div className='relative left-1/2 top-1/2 ttff flex items-center w-fit about-section-container'>
                 <div className='about-section-hex-container' >
                     <HexagonImage
