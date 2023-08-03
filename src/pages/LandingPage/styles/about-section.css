@@ -77,6 +77,10 @@
 
 @media(max-width:470px) {
 
+    .about-section {
+        height: 1150px;
+    }
+
     .about-section-content p {
         width: 310px;
         margin-left: 0;
