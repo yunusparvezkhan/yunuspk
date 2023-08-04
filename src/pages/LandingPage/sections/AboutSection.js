@@ -8,16 +8,11 @@ import Link from '../../../components/Link';
 
 import { useFetchAboutWidgetDataQuery } from '../../../store';
 
-const AboutSection = ({ image, alt, bgcolor, borderColor, paragraph }) => {
+const AboutSection = ({ bgcolor, borderColor }) => {
 
     const { data, error, isLoading } = useFetchAboutWidgetDataQuery();
     console.log(data);
     const fetchImage = data.images[4];
-
-    const handleClick = () => {
-
-    }
-
     return (
         <div className='relative left-1/2 ttf about-section' >
             <div className='relative left-1/2 top-1/2 ttff flex items-center w-fit about-section-container'>
@@ -39,7 +34,6 @@ const AboutSection = ({ image, alt, bgcolor, borderColor, paragraph }) => {
                     <Link to='/about'>
                         <Button primary
                             className="mt-10 px-6 font-mono about-section-more-btn"
-                            onClick={handleClick}
                         >
                             More
                             <GiArmoredBoomerang className='ml-2' />
