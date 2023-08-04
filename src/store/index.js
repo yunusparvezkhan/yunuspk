@@ -1,17 +1,24 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { navigationReducer, changeActivePage } from "./slices/navigationSlice";
-import { aboutReducer } from "./slices/aboutSlice";
+import { aboutWidgetApi } from "./apis/aboutWidgetApi";
+import { setupListeners } from "@reduxjs/toolkit/dist/query";
 
 const store = configureStore({
     reducer: {
         // Add Reducers
         navigation: navigationReducer,
-        about: aboutReducer,
+        [aboutWidgetApi.reducerPath]: aboutWidgetApi.reducer
+    },
+    middleware: (getDefaultMiddleware) => {
+        return getDefaultMiddleware()
+            .concat([aboutWidgetApi.middleware])
     }
 })
+
+setupListeners(store.dispatch);
 
 export { store };
 
 export { navigationReducer, changeActivePage };
 
-export { aboutReducer };
+export { useFetchAboutWidgetDataQuery } from "./apis/aboutWidgetApi"; 

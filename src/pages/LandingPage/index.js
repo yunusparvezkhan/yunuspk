@@ -11,14 +11,14 @@ import projectsData from './data/projectsData';
 
 const LandingPage = () => {
 
-	const { images, paragraph } = useSelector((state) => {
-		return state.about;
-	})
+	// const { images, paragraph } = useSelector((state) => {
+	// 	return state.about;
+	// })
 
 	return (
 		<div className='landing-page text-white' >
 			<IntroSection />
-			<AboutSection image={images[4].link} alt="something" bgcolor="#182d4a" borderColor="#20EC94" paragraph={paragraph.text} />
+			<AboutSection alt="something" bgcolor="#182d4a" borderColor="#20EC94" />
 			<BlogsSection blogsData={blogsData} />
 			<ProjectsSection projectsData={projectsData} />
 		</div>
