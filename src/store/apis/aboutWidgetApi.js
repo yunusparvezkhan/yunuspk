@@ -7,7 +7,7 @@ const aboutWidgetApi = createApi({
     }),
     endpoints(builder) {
         return {
-            fetchAboutWidgetData: builder.query({
+            fetchAboutWidget: builder.query({
                 query: () => {
                     return {
                         url: "/aboutWidget",
@@ -19,5 +19,5 @@ const aboutWidgetApi = createApi({
     }
 })
 
-export const { useFetchAboutWidgetDataQuery } = aboutWidgetApi;
+export const { useFetchAboutWidgetQuery } = aboutWidgetApi;
 export { aboutWidgetApi };

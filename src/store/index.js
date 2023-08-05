@@ -21,4 +21,4 @@ export { store };
 
 export { navigationReducer, changeActivePage };
 
-export { useFetchAboutWidgetDataQuery } from "./apis/aboutWidgetApi"; 
+export { useFetchAboutWidgetQuery } from "./apis/aboutWidgetApi"; 

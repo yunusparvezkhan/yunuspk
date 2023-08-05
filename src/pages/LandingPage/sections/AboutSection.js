@@ -6,11 +6,11 @@ import Button from '../../../components/Button';
 import { GiArmoredBoomerang } from 'react-icons/gi'
 import Link from '../../../components/Link';
 
-import { useFetchAboutWidgetDataQuery } from '../../../store';
+import { useFetchAboutWidgetQuery } from '../../../store';
 
 const AboutSection = ({ bgcolor, borderColor }) => {
 
-    const { data, error, isLoading } = useFetchAboutWidgetDataQuery();
+    const { data, error, isLoading } = useFetchAboutWidgetQuery();
 
     if (isLoading) {
         return <div>Loading</div>
