@@ -21,8 +21,11 @@ import React from 'react'
 const Datifier = ({ type, day, month, year }) => {
 
     let daySuffix;
-    const dayString = String(day)
+    let dayName;
+    const dayString = String(day);
 
+
+    // Validation of day suffix
     if (dayString.length === 2) {
         if (dayString[0] !== "1") {
             if (dayString[1] === "1") {
@@ -49,7 +52,66 @@ const Datifier = ({ type, day, month, year }) => {
         }
     }
 
-    if (type === "dmy-b") {
+
+    // Validation of day name
+
+    const digitToNameTransformer = (digit) => {
+        if (digit === "1") {
+            return "fir"
+        } else if (digit === "2") {
+            return "seco"
+        } else if (digit === "3") {
+            return "thi"
+        } else if (digit === "4") {
+            return "four"
+        } else if (digit === "5") {
+            return "five"
+        } else if (digit === "6") {
+            return "six"
+        } else if (digit === "7") {
+            return "seven"
+        } else if (digit === "8") {
+            return "eigh"
+        } else if (digit === "9") {
+            return "nine"
+        } else {
+            return "";
+        }
+    }
+
+
+    if (dayString.length === 1) {
+        dayName = digitToNameTransformer(dayString[0]).charAt(0).toUpperCase() + digitToNameTransformer(dayString[0]).slice(1)
+    } else if (dayString.length === 2) {
+        if (dayString[0] === "1") {
+            if (dayString[1] === "0") {
+                dayName = "Ten"
+            } else if (dayString[1] === "1") {
+                dayName = "Eleven"
+            } else if (dayString[1] === "2") {
+                dayName = "Twelf"
+            } else if (dayString[1] === "3") {
+                dayName = "Thirteen"
+            } else if (dayString[1] === "5") {
+                dayName = "Fifteen"
+            } else {
+                dayName = digitToNameTransformer(dayString[1]).charAt(0).toUpperCase() + digitToNameTransformer(dayString[1]).slice(1) + 'teen'
+            }
+        } else if (dayString[0] === "2" && dayString[1] === "0") {
+            dayName = "Twentie"
+        } else if (dayString[0] === "2" && dayString[1] !== "0") {
+            dayName = "Twenty" + digitToNameTransformer(dayString[1]);
+        } else if (dayString[0] === "3" && dayString[1] === "0") {
+            dayName = "Thirtie" + digitToNameTransformer(dayString[1]);
+        } else if (dayString[0] === "3" && dayString[1] !== "0") {
+            dayName = "Thirty" + digitToNameTransformer(dayString[1]);
+        }
+    }
+
+
+    if (type === "dmy-a") {
+        return <div>{dayName + daySuffix}</div>
+    } else if (type === "dmy-b") {
         return <div>{dayString + daySuffix}</div>
     }
 }

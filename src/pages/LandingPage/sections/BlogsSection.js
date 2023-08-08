@@ -43,7 +43,7 @@ const BlogsSection = () => {
                         </div>
                         <div className=' flex flex-col items-center  blogs-sec-card-content' >
                             <label>{blog.title}</label>
-                            <span> <Datifier type="dmy-b" day={1} /> {blog.date.month + 'th month of ' + blog.date.year + ' || ' + blog.topic}</span>
+                            <span> <Datifier type="dmy-a" day={31} /> {blog.date.month + 'th month of ' + blog.date.year + ' || ' + blog.topic}</span>
                         </div>
                     </div>
                 </a>
