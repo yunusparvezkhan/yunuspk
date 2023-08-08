@@ -6,6 +6,7 @@ import Link from '../../../components/Link';
 import Button from '../../../components/Button';
 import { GiArmoredBoomerang } from 'react-icons/gi';
 import { useFetchBlogsWidgetQuery } from '../../../store';
+import Datifier from '../../../components/Datifier';
 
 const BlogsSection = () => {
 
@@ -42,7 +43,7 @@ const BlogsSection = () => {
                         </div>
                         <div className=' flex flex-col items-center  blogs-sec-card-content' >
                             <label>{blog.title}</label>
-                            <span>{blog.date.day + 'th day of ' + blog.date.month + 'th month of ' + blog.date.year + ' || ' + blog.topic}</span>
+                            <span> <Datifier type="dmy-b" day={1} /> {blog.date.month + 'th month of ' + blog.date.year + ' || ' + blog.topic}</span>
                         </div>
                     </div>
                 </a>
