@@ -18,11 +18,14 @@ import React from 'react'
 
 
 
-const Datifier = ({ type, day, month, year }) => {
+const Datifier = ({ type, day, month, year, children }) => {
 
     let daySuffix;
     let dayName;
     const dayString = String(day);
+
+    let monthName;
+    const monthString = String(month);
 
 
     // Validation of day suffix
@@ -109,10 +112,41 @@ const Datifier = ({ type, day, month, year }) => {
     }
 
 
+
+
+    // Validation of Month Name
+    if (monthString === "1") {
+        monthName = "January";
+    } else if (monthString === "2") {
+        monthName = "February";
+    } else if (monthString === "3") {
+        monthName = "March";
+    } else if (monthString === "4") {
+        monthName = "April";
+    } else if (monthString === "5") {
+        monthName = "May";
+    } else if (monthString === "6") {
+        monthName = "June";
+    } else if (monthString === "7") {
+        monthName = "July";
+    } else if (monthString === "8") {
+        monthName = "August";
+    } else if (monthString === "9") {
+        monthName = "September";
+    } else if (monthString === "10") {
+        monthName = "October";
+    } else if (monthString === "11") {
+        monthName = "November";
+    } else if (monthString === "12") {
+        monthName = "December";
+    }
+
+
+
     if (type === "dmy-a") {
-        return <div>{dayName + daySuffix}</div>
+        return <div>{dayName + daySuffix + ' ' + monthName + ', ' + year + children}</div>
     } else if (type === "dmy-b") {
-        return <div>{dayString + daySuffix}</div>
+        return <div>{dayString + daySuffix + ' ' + monthName + ', ' + year + children}</div>
     }
 }
 
