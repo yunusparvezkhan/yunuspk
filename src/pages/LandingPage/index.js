@@ -14,7 +14,7 @@ const LandingPage = () => {
 		<div className='landing-page text-white' >
 			<IntroSection />
 			<AboutSection bgcolor="#182d4a" borderColor="#20EC94" />
-			<BlogsSection blogsData={blogsData} />
+			<BlogsSection />
 			<ProjectsSection projectsData={projectsData} />
 		</div>
 	);

@@ -7,14 +7,14 @@ import Button from '../../../components/Button';
 import { GiArmoredBoomerang } from 'react-icons/gi';
 import { useFetchBlogsWidgetQuery } from '../../../store';
 
-const BlogsSection = ({ blogsData }) => {
+const BlogsSection = () => {
 
     const { data, error, isLoading } = useFetchBlogsWidgetQuery();
 
     if (isLoading) {
         return <h1>Loading</h1>
     } else if (error) {
-        return <h1>{error}</h1>
+        return <h1>{error.error}</h1>
     } else {
         const renderBlogsGridCard = data.slice(0, 3).map((blog, i) => {
             return (
@@ -48,7 +48,6 @@ const BlogsSection = ({ blogsData }) => {
                 </a>
             )
         })
-
 
         return (
             <div>
