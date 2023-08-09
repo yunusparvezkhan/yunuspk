@@ -147,6 +147,8 @@ const Datifier = ({ type, day, month, year, children }) => {
         return <div>{dayName + daySuffix + ' ' + monthName + ', ' + year + children}</div>
     } else if (type === "dmy-b") {
         return <div>{dayString + daySuffix + ' ' + monthName + ', ' + year + children}</div>
+    } else if (type === "dmy-c") {
+        return <div>{day + ' ' + monthName + ' ' + year}</div>
     }
 }
 
