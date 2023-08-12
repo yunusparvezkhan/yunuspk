@@ -23,7 +23,7 @@ const BlogsSection = () => {
                     <div className='flex flex-col justify-between gap-7 cursor-pointer  blogs-section-card' >
                         <div className='blogs-sec-card-rectimage'>
                             {
-                                blog.image.link ?
+                                blog.image && blog.image.link ?
                                     <RectImage
                                         image={blog.image.link}
                                         alt={blog.image.alt}
