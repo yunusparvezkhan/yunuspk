@@ -153,6 +153,8 @@ const Datifier = ({ type, day, month, year, children }) => {
         return <div>{day + '/' + month + '/' + year + children}</div>
     } else if (type === "dmy-e") {
         return <div>{day + '/' + month + '/' + String(year).slice(2) + children}</div>
+    } else if (type === "dmy-f") {
+        return <div>{dayString.length === 1 ? '0' + dayString[0] : dayString}/{monthString.length === 1 ? '0' + monthString[0] : monthString}/{String(year).slice(2) + children}</div>
     }
 }
 
