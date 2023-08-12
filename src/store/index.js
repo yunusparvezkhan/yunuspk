@@ -3,6 +3,7 @@ import { navigationReducer, changeActivePage } from "./slices/navigationSlice";
 import { aboutWidgetApi } from "./apis/aboutWidgetApi";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import { blogsWidgetApi } from "./apis/blogsWidgetApi";
+import { projectsWidgetApi } from "./apis/projectsWidgetApi";
 
 const store = configureStore({
     reducer: {
@@ -10,10 +11,11 @@ const store = configureStore({
         navigation: navigationReducer,
         [aboutWidgetApi.reducerPath]: aboutWidgetApi.reducer,
         [blogsWidgetApi.reducerPath]: blogsWidgetApi.reducer,
+        [projectsWidgetApi.reducerPath]: projectsWidgetApi.reducer,
     },
     middleware: (getDefaultMiddleware) => {
         return getDefaultMiddleware()
-            .concat([aboutWidgetApi.middleware, blogsWidgetApi.middleware])
+            .concat([aboutWidgetApi.middleware, blogsWidgetApi.middleware, projectsWidgetApi.middleware])
     }
 })
 
@@ -25,3 +27,4 @@ export { navigationReducer, changeActivePage };
 
 export { useFetchAboutWidgetQuery } from "./apis/aboutWidgetApi";
 export { useFetchBlogsWidgetQuery } from "./apis/blogsWidgetApi";
+export { useFetchProjectsWidgetQuery } from "./apis/projectsWidgetApi";
