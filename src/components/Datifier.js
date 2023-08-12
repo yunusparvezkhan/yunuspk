@@ -142,7 +142,7 @@ const Datifier = ({ type, day, month, year, children }) => {
     }
 
 
-
+    // dmy types returns
     if (type === "dmy-a") {
         return <div>{dayName + daySuffix + ' ' + monthName + ', ' + year + children}</div>
     } else if (type === "dmy-b") {
@@ -155,6 +155,21 @@ const Datifier = ({ type, day, month, year, children }) => {
         return <div>{day + '/' + month + '/' + String(year).slice(2) + children}</div>
     } else if (type === "dmy-f") {
         return <div>{dayString.length === 1 ? '0' + dayString[0] : dayString}/{monthString.length === 1 ? '0' + monthString[0] : monthString}/{String(year).slice(2) + children}</div>
+    }
+
+    // mdy types returns
+    if (type === "mdy-a") {
+        return <div>{monthName + ' ' + dayName + daySuffix + ', ' + year + children}</div>
+    } else if (type === "mdy-b") {
+        return <div>{monthName + ' ' + dayString + daySuffix + ', ' + year + children}</div>
+    } else if (type === "mdy-c") {
+        return <div>{monthName + ' ' + day + ', ' + year + children}</div>
+    } else if (type === "mdy-d") {
+        return <div>{month + '/' + day + '/' + year + children}</div>
+    } else if (type === "mdy-e") {
+        return <div>{month + '/' + day + '/' + String(year).slice(2) + children}</div>
+    } else if (type === "mdy-f") {
+        return <div>{monthString.length === 1 ? '0' + monthString[0] : monthString}/{dayString.length === 1 ? '0' + dayString[0] : dayString}/{String(year).slice(2) + children}</div>
     }
 }
 
