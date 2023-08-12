@@ -6,8 +6,7 @@ import Button from '../../../components/Button';
 import { GiArmoredBoomerang } from 'react-icons/gi';
 import { useFetchProjectsWidgetQuery } from '../../../store';
 
-// This component expects the `projectsData` prop to be an array of objects
-const ProjectsSection = ({ projectsData }) => {
+const ProjectsSection = () => {
     const [activeProject, setActiveProject] = useState(0);
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 800 ? true : false);
     const [hoveredCard, setHoveredCard] = useState(null);

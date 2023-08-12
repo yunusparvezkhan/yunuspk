@@ -5,9 +5,6 @@ import './styles/landingpage.css'
 import BlogsSection from './sections/BlogsSection';
 import ProjectsSection from './sections/ProjectsSection';
 
-import blogsData from './data/blogsData.json'
-import projectsData from './data/projectsData';
-
 const LandingPage = () => {
 
 	return (
@@ -15,7 +12,7 @@ const LandingPage = () => {
 			<IntroSection />
 			<AboutSection bgcolor="#182d4a" borderColor="#20EC94" />
 			<BlogsSection />
-			<ProjectsSection projectsData={projectsData} />
+			<ProjectsSection />
 		</div>
 	);
 }
