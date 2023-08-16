@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Link from '../Link'
+import Link from '../components/Link'
 import { FiExternalLink } from 'react-icons/fi'
 import './styles/projects-widget.css'
-import Button from '../Button';
+import Button from '../components/Button';
 import { GiArmoredBoomerang } from 'react-icons/gi';
-import { useFetchProjectsWidgetQuery } from '../../store';
+import { useFetchProjectsWidgetQuery } from '../store';
 
 const ProjectsWidget = () => {
     const [activeProject, setActiveProject] = useState(0);

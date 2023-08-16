@@ -1,5 +1,5 @@
 import React from 'react';
-import ypkWelcome from '../../media/photos/ypk-welcome.png';
+import ypkWelcome from '../media/photos/ypk-welcome.png';
 import './styles/intro-widget.css';
 
 

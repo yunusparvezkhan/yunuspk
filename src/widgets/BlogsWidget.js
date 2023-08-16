@@ -1,12 +1,12 @@
 import React from 'react';
 import './styles/blogs-widget.css'
-import RectImage from '../RectImage';
-import TextThumbnail from '../TextThumbnail';
-import Link from '../Link';
-import Button from '../Button';
+import RectImage from '../components/RectImage';
+import TextThumbnail from '../components/TextThumbnail';
+import Link from '../components/Link';
+import Button from '../components/Button';
 import { GiArmoredBoomerang } from 'react-icons/gi';
-import { useFetchBlogsWidgetQuery } from '../../store';
-import Datifier from '../Datifier';
+import { useFetchBlogsWidgetQuery } from '../store';
+import Datifier from '../components/Datifier';
 
 const BlogsWidget = () => {
 

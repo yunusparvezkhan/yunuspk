@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles/landingpage.css'
-import IntroWidget from '../../components/widgets/IntroWidget';
-import AboutWidget from '../../components/widgets/AboutWidget';
-import BlogsWidget from '../../components/widgets/BlogsWidget';
-import ProjectsWidget from '../../components/widgets/ProjectsWidget';
+import IntroWidget from '../../widgets/IntroWidget';
+import AboutWidget from '../../widgets/AboutWidget';
+import BlogsWidget from '../../widgets/BlogsWidget';
+import ProjectsWidget from '../../widgets/ProjectsWidget';
 
 const LandingPage = () => {
 
