@@ -5,6 +5,7 @@ import './styles/projects-widget.css'
 import Button from '../components/Button';
 import { GiArmoredBoomerang } from 'react-icons/gi';
 import { useFetchProjectsWidgetQuery } from '../store';
+import PanelRenderer from './projects/PanelRenderer';
 
 const ProjectsWidget = () => {
     const [activeProject, setActiveProject] = useState(0);
@@ -84,8 +85,9 @@ const ProjectsWidget = () => {
                             </div>
                         </div>
                         <hr className='mx-10' ></hr>
-                        <div className='pl-10 p-5' >
-                            <div dangerouslySetInnerHTML={{ __html: data[activeProject].body }} />
+                        <div className='pl-10 p-5 projects-widget-preview-panel' >
+                            {/* <div dangerouslySetInnerHTML={{ __html: data[activeProject].body }} /> */}
+                            <PanelRenderer projectId={Number(data[activeProject].id)} />
                         </div>
                     </div>
                 </div>

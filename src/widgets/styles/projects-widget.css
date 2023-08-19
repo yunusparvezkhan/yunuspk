@@ -41,6 +41,12 @@
     color: #b9b9b9;
 }
 
+.projects-widget-preview-panel {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 @media(max-width: 800px) {
     .projects-widget-preview-panel {
         display: none;
