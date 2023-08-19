@@ -65,12 +65,6 @@ const ProjectsWidget = () => {
             }
         })
 
-        const readme = `
-            # hello
-            ![image](https://mediabase.netlify.app/ypk/photos/selfies/20190000_01.jpg)
-            `
-
-
         return (
             <div className='flex flex-col items-center  projects-widget' >
                 <h1 className='text-5xl w-fit mb-20' >Projects</h1>
