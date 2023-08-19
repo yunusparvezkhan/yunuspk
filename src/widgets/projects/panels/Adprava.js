@@ -80,7 +80,7 @@ const Adprava = () => {
             <p className='text-md text-gray-300 mb-8 ml-5' >
                 {outcomes.map((outcome, index) => {
                     return (
-                        <div className='flex flex-row items-left' >
+                        <div key={index} className='flex flex-row items-left' >
                             <span>{index + 1 + "."}</span>
                             <label className='ml-2' >{outcome}</label>
                         </div>
