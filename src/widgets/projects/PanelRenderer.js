@@ -3,20 +3,20 @@ import Adprava from './panels/Adprava'
 import WidgetApp from './panels/WidgetApp'
 import YunusPKold from './panels/YunusPKold'
 
-const PanelRenderer = ({ projectId }) => {
-    if (projectId === 1) {
+const PanelRenderer = ({ projectTitle }) => {
+    if (projectTitle === "adprv") {
         return (
             <div>
                 <Adprava />
             </div>
         )
-    } else if (projectId === 2) {
+    } else if (projectTitle === "widapp") {
         return (
             <div>
                 <WidgetApp />
             </div>
         )
-    } else if (projectId === 3) {
+    } else if (projectTitle === "ypkold") {
         return (
             <div>
                 <YunusPKold />
