@@ -1,6 +1,7 @@
 import React from 'react'
 import Adprava from './panels/Adprava'
 import WidgetApp from './panels/WidgetApp'
+import YunusPKold from './panels/YunusPKold'
 
 const PanelRenderer = ({ projectId }) => {
     if (projectId === 1) {
@@ -13,6 +14,12 @@ const PanelRenderer = ({ projectId }) => {
         return (
             <div>
                 <WidgetApp />
+            </div>
+        )
+    } else if (projectId === 3) {
+        return (
+            <div>
+                <YunusPKold />
             </div>
         )
     }
