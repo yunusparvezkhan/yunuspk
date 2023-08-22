@@ -28,7 +28,9 @@ const Adpvr = () => {
                         help to begginers etc reasons.
                     </p>
                 </div>
-                <img src='https://mediabase.netlify.app/projects/adprava/assets/AA-in-Hindi-in-blue-with-techboy.png' alt='adprava logo' width="300px" />
+                <div className='flex-2 mr-5 ml-2 '>
+                    <img src='https://mediabase.netlify.app/projects/adprava/assets/AA-in-Hindi-in-blue-with-techboy.png' alt='adprava logo' />
+                </div>
             </div>
 
             <h1 className='text-2xl mb-2' >Overview</h1>
