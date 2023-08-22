@@ -61,7 +61,7 @@ const Widapp = () => {
                 Lorem Ipsum is a dummy text model that can be
                 used in any kind of paragraph examples. Lorem Ipsum is a dummy text model that can be used in any kind of paragraph examples.
             </p>
-            <p className='text-md text-gray-300 mb-8 ml-5' >
+            <div className='text-md text-gray-300 mb-8 ml-5' >
                 {outcomes.map((outcome, index) => {
                     return (
                         <div key={index} className='flex flex-row items-left' >
@@ -70,7 +70,7 @@ const Widapp = () => {
                         </div>
                     )
                 })}
-            </p>
+            </div>
 
             <h1 className='text-2xl mb-2' >Conclusion</h1>
             <p className='text-md text-gray-300 mb-8'>
