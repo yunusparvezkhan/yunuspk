@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WidgetApp = () => {
+const Widapp = () => {
 
     const outcomes = [
         "Lorem Ipsum is a dummy text model that can be used in any     kind of paragraph examples.",
@@ -99,4 +99,4 @@ const WidgetApp = () => {
     )
 }
 
-export default WidgetApp
+export default Widapp;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Adprava = () => {
+const Adpvr = () => {
 
     const outcomes = [
         "Lorem Ipsum is a dummy text model that can be used in any     kind of paragraph examples.",
@@ -115,4 +115,4 @@ const Adprava = () => {
     )
 }
 
-export default Adprava
+export default Adpvr;

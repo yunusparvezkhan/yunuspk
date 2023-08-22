@@ -1,25 +1,25 @@
-import React from 'react'
-import Adprava from './panels/Adprava'
-import WidgetApp from './panels/WidgetApp'
-import YunusPKold from './panels/YunusPKold'
+import React from 'react';
+import Adpvr from './panels/Adprv';
+import Widapp from './panels/Widapp';
+import Ypkold from './panels/Ypkold';
 
 const PanelRenderer = ({ projectTitle }) => {
     if (projectTitle === "adprv") {
         return (
             <div>
-                <Adprava />
+                <Adpvr />
             </div>
         )
     } else if (projectTitle === "widapp") {
         return (
             <div>
-                <WidgetApp />
+                <Widapp />
             </div>
         )
     } else if (projectTitle === "ypkold") {
         return (
             <div>
-                <YunusPKold />
+                <Ypkold />
             </div>
         )
     }

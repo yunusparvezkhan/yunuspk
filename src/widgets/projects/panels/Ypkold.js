@@ -1,6 +1,6 @@
 import React from 'react'
 
-const YunusPKold = () => {
+const Ypkold = () => {
     return (
         <div>
             <h2 className='text-lg'>YunusPK-old is a project I have built in 2020 using only html, css & vanilla javascript. That was my first personality website. This website is
@@ -10,4 +10,4 @@ const YunusPKold = () => {
     )
 }
 
-export default YunusPKold;
+export default Ypkold;
