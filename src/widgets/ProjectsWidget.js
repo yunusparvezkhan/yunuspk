@@ -85,7 +85,7 @@ const ProjectsWidget = () => {
                             </div>
                         </div>
                         <hr className='mx-10' ></hr>
-                        <div className='pl-10 p-5 projects-widget-preview-panel' >
+                        <div className='pl-10 pr-10 p-5 projects-widget-preview-panel' >
                             {/* <div dangerouslySetInnerHTML={{ __html: data[activeProject].body }} /> */}
                             <PanelRenderer projectTitle={data[activeProject].uniqueKey} />
                         </div>
