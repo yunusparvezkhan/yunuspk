@@ -18,7 +18,7 @@ const AboutWidget = ({ bgcolor, borderColor }) => {
         return <div>Error Loading Data. Please check your connection</div>
     } else {
 
-        const fetchImage = data.images[4];
+        const fetchImage = data.images[0];
         return (
             <div className='relative left-1/2 ttf about-widget' >
                 <div className='relative left-1/2 top-1/2 ttff flex items-center w-fit about-widget-container'>
