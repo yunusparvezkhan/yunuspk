@@ -3,7 +3,7 @@ import { fetchBaseQuery, createApi } from "@reduxjs/toolkit/query/react";
 const blogsWidgetApi = createApi({
     reducerPath: "blogsWidget",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:3003"
+        baseUrl: "https://ypk-dattanidhi.onrender.com"
     }),
     endpoints(builder) {
         return {
