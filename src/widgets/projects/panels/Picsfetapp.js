@@ -18,7 +18,7 @@ const Picsfetapp = () => {
             <h1 className='text-2xl mb-2' >Introduction</h1>
             <p className='text-md text-gray-300 mb-8'>
                 pics-fetching-app, (aka chitro) is an app that fetches Images matching
-                with the user’s prompted query. This app uses api from unsplash & renders
+                with the user's prompted query. This app uses api from unsplash & renders
                 upto 10 available images to user.
             </p>
 
@@ -51,7 +51,7 @@ const Picsfetapp = () => {
                 <h2 className='text-lg font-semibold' >2. Search Results Feature</h2>
                 <p className='text-md text-gray-300 mb-3 ml-5'>
                     After user submits some queries, the app sends a request to Unsplash
-                    with the user’s queries, and prints the images got back from the api
+                    with the user's queries, and prints the images got back from the api
                     as a grid view below the search feature.
                 </p>
 

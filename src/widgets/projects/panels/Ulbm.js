@@ -30,9 +30,9 @@ const Ulbm = () => {
 
             <h1 className='text-2xl mb-2' >Overview</h1>
             <p className='text-md text-gray-300 mb-8'>
-                This app on the top level has 3 features, that’s users, albums & images.
+                This app on the top level has 3 features, that's users, albums & images.
                 At the landing in the app, it has feature to add a new user, and inside
-                every user’s panel (that will apprear as a list), there is a feature to
+                every user's panel (that will apprear as a list), there is a feature to
                 add a new album, and exactly in the same way, every album has a feature
                 to add images.
             </p>
