@@ -33,9 +33,16 @@ const Slider = () => {
 
     const [orientation, setOrientation] = useState(["alpha", "beta", "gamma", "delta", "epsilon"])
 
-    const onNext = async () => {
+    const onNext = () => {
         const NewOrientation = orientation.slice(1)
         NewOrientation.push(orientation[0]);
+        console.log(NewOrientation);
+        setOrientation(NewOrientation);
+    }
+
+    const onPrevious = () => {
+        const NewOrientation = orientation.slice(0, orientation.length - 1)
+        NewOrientation.unshift(orientation[orientation.length - 1]);
         console.log(NewOrientation);
         setOrientation(NewOrientation);
     }
@@ -44,6 +51,7 @@ const Slider = () => {
         <div>
             Slider
             <Button primary className="mb-40" onClick={onNext}>{"Next>>"}</Button>
+            <Button primary className="mb-40" onClick={onPrevious}>{"Previous>>"}</Button>
         </div>
     )
 }
