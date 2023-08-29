@@ -4,6 +4,7 @@ import IntroWidget from '../../widgets/IntroWidget';
 import AboutWidget from '../../widgets/AboutWidget';
 import BlogsWidget from '../../widgets/BlogsWidget';
 import ProjectsWidget from '../../widgets/ProjectsWidget';
+import AchievementsWidget from '../../widgets/AchievementsWidget';
 
 const LandingPage = () => {
 
@@ -13,6 +14,7 @@ const LandingPage = () => {
 			<AboutWidget bgcolor="#182d4a" borderColor="#20EC94" />
 			<BlogsWidget />
 			<ProjectsWidget />
+			<AchievementsWidget />
 		</div>
 	);
 }
