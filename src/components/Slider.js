@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from './Button';
 
 const Slider = () => {
 
@@ -42,7 +43,7 @@ const Slider = () => {
     return (
         <div>
             Slider
-            <button onClick={onNext}>Next</button>
+            <Button primary className="mb-40" onClick={onNext}>{"Next>>"}</Button>
         </div>
     )
 }
