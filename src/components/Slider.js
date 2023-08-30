@@ -35,34 +35,88 @@ const Slider = () => {
             title: "some certificate",
             codeName: "epsilon",
             description: "some description"
-        }
+        },
+        {
+            image: "https://cdn.cp.adobe.io/content/2/rendition/21d3dc6d-9d20-4833-bb77-6b7e80e5f46b/artwork/c4040e75-5023-4d2f-9037-3a1b9b487988/version/0/format/jpg/dimension/width/size/400",
+            title: "some certificate",
+            codeName: "zeta",
+            description: "some description"
+        },
     ]
 
-    const [orientation, setOrientation] = useState(slides.slice(0, 5).map((slide) => slide))
+    const [orientation, setOrientation] = useState(slides.map((slide) => slide));
+    const [transformNum, setTransformNum] = useState(0);
+    const [nextScrollCount, setNextScrollCount] = useState(0);
+    const [prevScrollCount, setPrevScrollCount] = useState(0);
+    const [scrollTracker, setScrollTracker] = useState(0);
+    // const [orientation, setOrientation] = useState([
+    //     {
+    //         name: "alpha",
+    //         associatedWith: "alpha"
+    //     },
+    //     {
+    //         name: "beta",
+    //         associatedWith: "beta"
+    //     },
+    //     {
+    //         name: "gamma",
+    //         associatedWith: "gamma"
+    //     },
+    //     {
+    //         name: "delta",
+    //         associatedWith: "delta"
+    //     },
+    //     {
+    //         name: "epsilon",
+    //         associatedWith: "epsilon"
+    //     },
+    //     {
+    //         name: "zeta",
+    //         associatedWith: "zeta"
+    //     }
+    // ])
 
     const onNext = () => {
-        const NewOrientation = orientation.slice(1)
-        NewOrientation.push(orientation[0]);
+        document.getElementById('cards-container').style.transform = `translate(${transformNum - 188}px)`;
+        setTransformNum(transformNum - 188);
+        const NewOrientation = orientation;
+        NewOrientation.push(orientation[nextScrollCount]);
         setOrientation(NewOrientation);
+        setNextScrollCount(nextScrollCount + 1);
+        setScrollTracker(scrollTracker + 1);
+        console.log(orientation);
     }
+
+    console.log(scrollTracker);
 
     const onPrevious = () => {
-        const NewOrientation = orientation.slice(0, orientation.length - 1)
-        NewOrientation.unshift(orientation[orientation.length - 1]);
-        setOrientation(NewOrientation);
+        document.getElementById('cards-container').style.transform = `translate(${scrollTracker > 0 && transformNum + 188
+            }px)`;
+        scrollTracker > 0 && setTransformNum(transformNum + 188);
+        scrollTracker > 0 && setScrollTracker(scrollTracker - 1);
+        scrollTracker > 0 && setPrevScrollCount(prevScrollCount + 1);
+        console.log(orientation);
     }
 
-    const cards = orientation.map((slide) => {
+    // const onPrevious = () => {
+    //     const NewOrientation = orientation.slice(0, orientation.length - 1)
+    //     NewOrientation.unshift(orientation[orientation.length - 1]);
+    //     setOrientation(NewOrientation);
+    // }
+
+    const renderCards = orientation.map((slide, i) => {
         return (
-            <div key={slide.codeName} className='w-180px h-240px bg-gray-700'>
-                <div className='text-center flex flex-col gap-3' >
-                    <h3 className='pt-3' >
-                        {slide.title}
-                    </h3>
-                    <label>
-                        {slide.codeName}
-                    </label>
-                    <img src={slide.image} alt='slide.title' />
+            <div key={i}>
+                <div className='w-180px h-240px bg-gray-700' >
+                    <div className='text-center flex flex-col gap-3' >
+                        <h3 className='pt-3' >
+                            {slide.title}
+                        </h3>
+                        <label>
+                            {slide.codeName}
+                        </label>
+                        <img src={slide.image} alt='slide.title' />
+                    </div>
                 </div>
             </div>
         )
@@ -73,10 +127,16 @@ const Slider = () => {
             <h1 className='text-center text-3xl mb-10' >
                 Slider
             </h1>
-            <div className='flex flex-row relative w-fit left-1/2 ttf items-center mb-20 gap-3 px-3' >
-                <Button primary className="" onClick={onPrevious}><AiFillCaretLeft /></Button>
-                <div className='flex flex-row gap-2 justify-between ' >
-                    {cards}
+            <div className='flex flex-row relative w-fit left-1/2 ttf items-center mb-96 gap-3 px-3' >
+                {
+                    scrollTracker === 0 ?
+                        <button className='px-3 py-2 bg-blue-500 opacity-70 cursor-not-allowed'><AiFillCaretLeft /></button>
+                        : <Button primary onClick={onPrevious}><AiFillCaretLeft /></Button>
+                }
+                <div className='bg-blue-400 py-3 cards-group ' >
+                    <div id='cards-container' className='flex flex-row gap-2 justify-between w-auto cards-container bg-red-400' >
+                        {renderCards}
+                    </div>
                 </div>
                 <Button primary className="" onClick={onNext}><AiFillCaretRight /></Button>
             </div>
