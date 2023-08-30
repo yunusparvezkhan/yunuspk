@@ -36,7 +36,7 @@ const Slider = () => {
         }
     ]
 
-    const [orientation, setOrientation] = useState(slides.map((slide) => slide.codeName))
+    const [orientation, setOrientation] = useState(slides.map((slide) => slide))
 
     const onNext = () => {
         const NewOrientation = orientation.slice(1)
@@ -52,11 +52,22 @@ const Slider = () => {
         setOrientation(NewOrientation);
     }
 
+    const cards = orientation.map((slide) => {
+        return (
+            <div>
+                {slide.codeName}
+            </div>
+        )
+    })
+
     return (
         <div>
             Slider
             <Button primary className="mb-40" onClick={onNext}>{"Next>>"}</Button>
             <Button primary className="mb-40" onClick={onPrevious}>{"Previous>>"}</Button>
+            <div className='mb-20' >
+                {cards}
+            </div>
         </div>
     )
 }
