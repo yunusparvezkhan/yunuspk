@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Button from './Button';
 
+import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai'
+
 const Slider = () => {
 
     const slides = [
@@ -71,11 +73,11 @@ const Slider = () => {
                 Slider
             </h1>
             <div className='flex flex-row relative w-fit left-1/2 ttf items-center mb-20 gap-3 px-3' >
-                <Button primary className="" onClick={onPrevious}>{"<<"}</Button>
+                <Button primary className="" onClick={onPrevious}><AiFillCaretLeft /></Button>
                 <div className='flex flex-row gap-2 justify-between ' >
                     {cards}
                 </div>
-                <Button primary className="" onClick={onNext}>{">>"}</Button>
+                <Button primary className="" onClick={onNext}><AiFillCaretRight /></Button>
             </div>
         </div>
     )
