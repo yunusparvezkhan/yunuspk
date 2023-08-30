@@ -54,7 +54,7 @@ const Slider = () => {
 
     const cards = orientation.map((slide) => {
         return (
-            <div className='w-180px h-240px bg-gray-700'>
+            <div key={slide.codeName} className='w-180px h-240px bg-gray-700'>
                 <div className='text-center' >
                     <h3 className='mb-10 mt-10' >
                         {slide.title}
