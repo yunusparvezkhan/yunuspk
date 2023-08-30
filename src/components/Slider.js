@@ -49,32 +49,6 @@ const Slider = () => {
     const [nextScrollCount, setNextScrollCount] = useState(0);
     const [prevScrollCount, setPrevScrollCount] = useState(0);
     const [scrollTracker, setScrollTracker] = useState(0);
-    // const [orientation, setOrientation] = useState([
-    //     {
-    //         name: "alpha",
-    //         associatedWith: "alpha"
-    //     },
-    //     {
-    //         name: "beta",
-    //         associatedWith: "beta"
-    //     },
-    //     {
-    //         name: "gamma",
-    //         associatedWith: "gamma"
-    //     },
-    //     {
-    //         name: "delta",
-    //         associatedWith: "delta"
-    //     },
-    //     {
-    //         name: "epsilon",
-    //         associatedWith: "epsilon"
-    //     },
-    //     {
-    //         name: "zeta",
-    //         associatedWith: "zeta"
-    //     }
-    // ])
 
     const onNext = () => {
         document.getElementById('cards-container').style.transform = `translate(${transformNum - 188}px)`;
@@ -97,12 +71,6 @@ const Slider = () => {
         scrollTracker > 0 && setPrevScrollCount(prevScrollCount + 1);
         console.log(orientation);
     }
-
-    // const onPrevious = () => {
-    //     const NewOrientation = orientation.slice(0, orientation.length - 1)
-    //     NewOrientation.unshift(orientation[orientation.length - 1]);
-    //     setOrientation(NewOrientation);
-    // }
 
     const renderCards = orientation.map((slide, i) => {
         return (
