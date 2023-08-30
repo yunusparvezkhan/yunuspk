@@ -71,11 +71,11 @@ const Slider = () => {
                 Slider
             </h1>
             <div className='flex flex-row relative w-fit left-1/2 ttf items-center mb-20 gap-3 px-3' >
-                <Button primary className="" onClick={onNext}>{"Next>>"}</Button>
+                <Button primary className="" onClick={onPrevious}>{"<<"}</Button>
                 <div className='flex flex-row gap-2 justify-between ' >
                     {cards}
                 </div>
-                <Button primary className="" onClick={onPrevious}>{"Previous>>"}</Button>
+                <Button primary className="" onClick={onNext}>{">>"}</Button>
             </div>
         </div>
     )
