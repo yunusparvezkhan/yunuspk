@@ -7,31 +7,36 @@ const Slider = () => {
         {
             image: "https://marketplace.canva.com/EAFNlUJs5g4/2/0/1600w/canva-white-simple-certificate-of-appreciation-Fcz7KkZ5YaU.jpg",
             title: "some certificate",
+            codeName: "alpha",
             description: "some description"
         },
         {
             image: "https://marketplace.canva.com/EAFNlUJs5g4/2/0/1600w/canva-white-simple-certificate-of-appreciation-Fcz7KkZ5YaU.jpg",
             title: "some certificate",
+            codeName: "beta",
             description: "some description"
         },
         {
             image: "https://marketplace.canva.com/EAFNlUJs5g4/2/0/1600w/canva-white-simple-certificate-of-appreciation-Fcz7KkZ5YaU.jpg",
             title: "some certificate",
+            codeName: "gamma",
             description: "some description"
         },
         {
             image: "https://marketplace.canva.com/EAFNlUJs5g4/2/0/1600w/canva-white-simple-certificate-of-appreciation-Fcz7KkZ5YaU.jpg",
             title: "some certificate",
+            codeName: "delta",
             description: "some description"
         },
         {
             image: "https://marketplace.canva.com/EAFNlUJs5g4/2/0/1600w/canva-white-simple-certificate-of-appreciation-Fcz7KkZ5YaU.jpg",
             title: "some certificate",
+            codeName: "epsilon",
             description: "some description"
         }
     ]
 
-    const [orientation, setOrientation] = useState(["alpha", "beta", "gamma", "delta", "epsilon"])
+    const [orientation, setOrientation] = useState(slides.map((slide) => slide.codeName))
 
     const onNext = () => {
         const NewOrientation = orientation.slice(1)
