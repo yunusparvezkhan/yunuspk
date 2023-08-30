@@ -54,8 +54,15 @@ const Slider = () => {
 
     const cards = orientation.map((slide) => {
         return (
-            <div>
-                {slide.codeName}
+            <div className='w-180px h-240px bg-gray-700'>
+                <div className='text-center' >
+                    <h3 className='mb-10 mt-10' >
+                        {slide.title}
+                    </h3>
+                    <label>
+                        {slide.codeName}
+                    </label>
+                </div>
             </div>
         )
     })
@@ -65,7 +72,7 @@ const Slider = () => {
             Slider
             <Button primary className="mb-40" onClick={onNext}>{"Next>>"}</Button>
             <Button primary className="mb-40" onClick={onPrevious}>{"Previous>>"}</Button>
-            <div className='mb-20' >
+            <div className='mb-20 flex flex-row gap-2 justify-between w-70per relative left-1/2 ttf' >
                 {cards}
             </div>
         </div>

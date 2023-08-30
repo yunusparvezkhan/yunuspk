@@ -36,6 +36,15 @@ body {
     width: 1000px;
 }
 
+.w-180px {
+    width: 180px;
+}
+
+.h-240px {
+    height: 240px;
+}
+
+
 .h-60px {
     height: 60px;
 }
