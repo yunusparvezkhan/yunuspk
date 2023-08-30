@@ -41,14 +41,12 @@ const Slider = () => {
     const onNext = () => {
         const NewOrientation = orientation.slice(1)
         NewOrientation.push(orientation[0]);
-        console.log(NewOrientation);
         setOrientation(NewOrientation);
     }
 
     const onPrevious = () => {
         const NewOrientation = orientation.slice(0, orientation.length - 1)
         NewOrientation.unshift(orientation[orientation.length - 1]);
-        console.log(NewOrientation);
         setOrientation(NewOrientation);
     }
 
