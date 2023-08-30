@@ -54,7 +54,8 @@ const Slider = () => {
         document.getElementById('cards-container').style.transform = `translate(${transformNum - 188}px)`;
         setTransformNum(transformNum - 188);
         const NewOrientation = orientation;
-        NewOrientation.push(orientation[nextScrollCount]);
+        nextScrollCount === scrollTracker &&
+            NewOrientation.push(orientation[scrollTracker]);
         setOrientation(NewOrientation);
         setNextScrollCount(nextScrollCount + 1);
         setScrollTracker(scrollTracker + 1);
