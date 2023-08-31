@@ -58,7 +58,6 @@ const Slider = () => {
         setOrientation(NewOrientation);
         scrollDifTracker > 0 && setScrollDifTracker(scrollDifTracker - 1);
         setScrollTracker(scrollTracker + 1);
-        console.log(orientation);
     }
 
     const onPrevious = () => {
@@ -66,7 +65,6 @@ const Slider = () => {
         scrollTracker > 0 && setTransformNum(transformNum + 188);
         scrollTracker > 0 && setScrollTracker(scrollTracker - 1);
         scrollTracker > 0 && setScrollDifTracker(scrollDifTracker + 1);
-        console.log(orientation);
     }
 
     const renderCards = orientation.map((slide, i) => {
