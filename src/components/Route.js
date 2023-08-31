@@ -12,4 +12,4 @@ const Route = ({ path, secondaryPath, children }) => {
     }
 }
 
-export default Route
+export default Route;
