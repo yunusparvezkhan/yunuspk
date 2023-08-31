@@ -61,8 +61,6 @@ const Slider = () => {
         console.log(orientation);
     }
 
-    console.log(scrollDifTracker);
-
     const onPrevious = () => {
         document.getElementById('cards-container').style.transform = `translate(${scrollTracker > 0 && transformNum + 188}px)`;
         scrollTracker > 0 && setTransformNum(transformNum + 188);
