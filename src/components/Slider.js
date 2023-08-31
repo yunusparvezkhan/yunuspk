@@ -46,8 +46,6 @@ const Slider = () => {
 
     const [orientation, setOrientation] = useState(slides.map((slide) => slide));
     const [transformNum, setTransformNum] = useState(0);
-    const [nextScrollCount, setNextScrollCount] = useState(0);
-    const [prevScrollCount, setPrevScrollCount] = useState(0);
     const [scrollDifTracker, setScrollDifTracker] = useState(0);
     const [scrollTracker, setScrollTracker] = useState(0);
 
@@ -58,7 +56,6 @@ const Slider = () => {
         scrollDifTracker === 0 &&
             NewOrientation.push(orientation[scrollTracker]);
         setOrientation(NewOrientation);
-        setNextScrollCount(nextScrollCount + 1);
         scrollDifTracker > 0 && setScrollDifTracker(scrollDifTracker - 1);
         setScrollTracker(scrollTracker + 1);
         console.log(orientation);
@@ -71,7 +68,6 @@ const Slider = () => {
         scrollTracker > 0 && setTransformNum(transformNum + 188);
         scrollTracker > 0 && setScrollTracker(scrollTracker - 1);
         scrollTracker > 0 && setScrollDifTracker(scrollDifTracker + 1);
-        scrollTracker > 0 && setPrevScrollCount(prevScrollCount + 1);
         console.log(orientation);
     }
 
