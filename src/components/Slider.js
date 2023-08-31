@@ -48,27 +48,29 @@ const Slider = () => {
     const [transformNum, setTransformNum] = useState(0);
     const [nextScrollCount, setNextScrollCount] = useState(0);
     const [prevScrollCount, setPrevScrollCount] = useState(0);
+    const [scrollDifTracker, setScrollDifTracker] = useState(0);
     const [scrollTracker, setScrollTracker] = useState(0);
 
     const onNext = () => {
         document.getElementById('cards-container').style.transform = `translate(${transformNum - 188}px)`;
         setTransformNum(transformNum - 188);
         const NewOrientation = orientation;
-        nextScrollCount === scrollTracker &&
+        scrollDifTracker === 0 &&
             NewOrientation.push(orientation[scrollTracker]);
         setOrientation(NewOrientation);
         setNextScrollCount(nextScrollCount + 1);
+        scrollDifTracker > 0 && setScrollDifTracker(scrollDifTracker - 1);
         setScrollTracker(scrollTracker + 1);
         console.log(orientation);
     }
 
-    console.log(scrollTracker);
+    console.log(scrollDifTracker);
 
     const onPrevious = () => {
-        document.getElementById('cards-container').style.transform = `translate(${scrollTracker > 0 && transformNum + 188
-            }px)`;
+        document.getElementById('cards-container').style.transform = `translate(${scrollTracker > 0 && transformNum + 188}px)`;
         scrollTracker > 0 && setTransformNum(transformNum + 188);
         scrollTracker > 0 && setScrollTracker(scrollTracker - 1);
+        scrollTracker > 0 && setScrollDifTracker(scrollDifTracker + 1);
         scrollTracker > 0 && setPrevScrollCount(prevScrollCount + 1);
         console.log(orientation);
     }
