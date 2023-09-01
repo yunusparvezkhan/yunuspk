@@ -70,7 +70,7 @@ const Slider = () => {
     const renderCards = orientation.map((slide, i) => {
         return (
             <div key={i}>
-                <div className={`${scrollTracker + 2 === i ? 'w-360px' : 'w-240px mx-1'} h-auto`} >
+                <div className={`${scrollTracker + 2 === i ? 'w-360px' : 'w-240px mx-3'} h-auto`} >
                     <div className='text-center flex flex-col gap-3' >
                         <img src={slide.image} className={`${scrollTracker + 2 === i ? 'w-360px' : 'w-240px'} h-auto`} alt='slide.title' />
                         <h3 className='' >
