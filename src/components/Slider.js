@@ -50,8 +50,8 @@ const Slider = () => {
     const [scrollTracker, setScrollTracker] = useState(0);
 
     const onNext = () => {
-        document.getElementById('cards-container').style.transform = `translate(${transformNum - 188}px)`;
-        setTransformNum(transformNum - 188);
+        document.getElementById('cards-container').style.transform = `translate(${transformNum - 248}px)`;
+        setTransformNum(transformNum - 248);
         const NewOrientation = orientation;
         scrollDifTracker === 0 &&
             NewOrientation.push(orientation[scrollTracker]);
@@ -61,8 +61,8 @@ const Slider = () => {
     }
 
     const onPrevious = () => {
-        document.getElementById('cards-container').style.transform = `translate(${scrollTracker > 0 && transformNum + 188}px)`;
-        scrollTracker > 0 && setTransformNum(transformNum + 188);
+        document.getElementById('cards-container').style.transform = `translate(${scrollTracker > 0 && transformNum + 248}px)`;
+        scrollTracker > 0 && setTransformNum(transformNum + 248);
         scrollTracker > 0 && setScrollTracker(scrollTracker - 1);
         scrollTracker > 0 && setScrollDifTracker(scrollDifTracker + 1);
     }
@@ -70,15 +70,12 @@ const Slider = () => {
     const renderCards = orientation.map((slide, i) => {
         return (
             <div key={i}>
-                <div className='w-180px h-240px bg-gray-700' >
+                <div className={`${scrollTracker + 2 === i ? 'w-360px' : 'w-240px mx-1'} h-auto bg-gray-700`} >
                     <div className='text-center flex flex-col gap-3' >
-                        <h3 className='pt-3' >
-                            {slide.title}
-                        </h3>
-                        <label>
+                        <img src={slide.image} className={`${scrollTracker + 2 === i ? 'w-360px' : 'w-240px'} h-auto`} alt='slide.title' />
+                        <h3 className='' >
                             {slide.codeName}
-                        </label>
-                        <img src={slide.image} alt='slide.title' />
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -97,7 +94,7 @@ const Slider = () => {
                         : <Button primary onClick={onPrevious}><AiFillCaretLeft /></Button>
                 }
                 <div className='bg-blue-400 py-3 cards-group ' >
-                    <div id='cards-container' className='flex flex-row gap-2 justify-between w-auto cards-container bg-red-400' >
+                    <div id='cards-container' className='flex flex-row justify-between items-center w-auto cards-container bg-red-400' >
                         {renderCards}
                     </div>
                 </div>

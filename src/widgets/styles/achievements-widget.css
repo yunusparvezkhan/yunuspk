@@ -4,7 +4,9 @@
 
 .cards-group {
     overflow-x: hidden;
-    width: 932px;
+    overflow-y: hidden;
+    height: auto;
+    width: 1352px;
 }
 
 .cards-container {
