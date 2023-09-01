@@ -50,8 +50,8 @@ const Slider = () => {
     const [scrollTracker, setScrollTracker] = useState(0);
 
     const onNext = () => {
-        document.getElementById('cards-container').style.transform = `translate(${transformNum - 248}px)`;
-        setTransformNum(transformNum - 248);
+        document.getElementById('cards-container').style.transform = `translate(${transformNum - 264}px)`;
+        setTransformNum(transformNum - 264);
         const NewOrientation = orientation;
         scrollDifTracker === 0 &&
             NewOrientation.push(orientation[scrollTracker]);
@@ -61,18 +61,18 @@ const Slider = () => {
     }
 
     const onPrevious = () => {
-        document.getElementById('cards-container').style.transform = `translate(${scrollTracker > 0 && transformNum + 248}px)`;
-        scrollTracker > 0 && setTransformNum(transformNum + 248);
-        scrollTracker > 0 && setScrollTracker(scrollTracker - 1);
-        scrollTracker > 0 && setScrollDifTracker(scrollDifTracker + 1);
+        document.getElementById('cards-container').style.transform = `translate(${scrollTracker >= 0 && transformNum + 264}px)`;
+        scrollTracker >= 0 && setTransformNum(transformNum + 264);
+        scrollTracker >= 0 && setScrollTracker(scrollTracker - 1);
+        scrollTracker >= 0 && setScrollDifTracker(scrollDifTracker + 1);
     }
 
     const renderCards = orientation.map((slide, i) => {
         return (
             <div key={i}>
-                <div className={`${scrollTracker + 2 === i ? 'w-360px' : 'w-240px mx-3'} h-auto`} >
+                <div className={`${scrollTracker + 1 === i ? 'w-360px' : 'w-240px mx-3'} h-auto`} >
                     <div className='text-center flex flex-col gap-3' >
-                        <img src={slide.image} className={`${scrollTracker + 2 === i ? 'w-360px' : 'w-240px'} h-auto`} alt='slide.title' />
+                        <img src={slide.image} className={`${scrollTracker + 1 === i ? 'w-360px' : 'w-240px'} h-auto`} alt='slide.title' />
                         <h3 className='' >
                             {slide.codeName}
                         </h3>
@@ -89,7 +89,7 @@ const Slider = () => {
             </h1>
             <div className='flex flex-row relative w-fit left-1/2 ttf items-center mb-96 gap-3 px-3' >
                 {
-                    scrollTracker === 0 ?
+                    scrollTracker < 0 ?
                         <button className='px-3 py-2 bg-blue-500 opacity-70 cursor-not-allowed'><AiFillCaretLeft /></button>
                         : <Button primary onClick={onPrevious}><AiFillCaretLeft /></Button>
                 }
