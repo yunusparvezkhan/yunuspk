@@ -70,7 +70,7 @@ const Slider = () => {
     const renderCards = orientation.map((slide, i) => {
         return (
             <div key={i}>
-                <div className={`${scrollTracker + 2 === i ? 'w-360px' : 'w-240px mx-1'} h-auto bg-gray-700`} >
+                <div className={`${scrollTracker + 2 === i ? 'w-360px' : 'w-240px mx-1'} h-auto`} >
                     <div className='text-center flex flex-col gap-3' >
                         <img src={slide.image} className={`${scrollTracker + 2 === i ? 'w-360px' : 'w-240px'} h-auto`} alt='slide.title' />
                         <h3 className='' >
@@ -93,8 +93,8 @@ const Slider = () => {
                         <button className='px-3 py-2 bg-blue-500 opacity-70 cursor-not-allowed'><AiFillCaretLeft /></button>
                         : <Button primary onClick={onPrevious}><AiFillCaretLeft /></Button>
                 }
-                <div className='bg-blue-400 py-3 cards-group ' >
-                    <div id='cards-container' className='flex flex-row justify-between items-center w-auto cards-container bg-red-400' >
+                <div className='py-3 cards-group ' >
+                    <div id='cards-container' className='flex flex-row justify-between items-center w-auto cards-container' >
                         {renderCards}
                     </div>
                 </div>
