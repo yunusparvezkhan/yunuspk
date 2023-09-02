@@ -11,10 +11,10 @@
 
 .cards-container {
     transform: translate(0);
-    transition: 0.8s;
+    transition: 0.3s;
     height: 270px;
 }
 
 .cards-container * {
-    transition: 0.2s;
+    transition: 0.4s;
 }
