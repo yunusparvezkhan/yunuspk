@@ -5,11 +5,16 @@
 .cards-group {
     overflow-x: hidden;
     overflow-y: hidden;
-    height: auto;
+    height: 330px;
     width: 888px;
 }
 
 .cards-container {
     transform: translate(0);
-    transition: 0.3s;
+    transition: 0.8s;
+    height: 270px;
+}
+
+.cards-container * {
+    transition: 0.2s;
 }

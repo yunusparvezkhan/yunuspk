@@ -71,14 +71,16 @@ const Slider = () => {
         return (
             <div key={i}>
                 <div className={`${scrollTracker + 1 === i ? 'w-360px' : 'w-240px mx-3'}`} >
-                    <div className='text-center flex flex-col gap-3' >
-                        <img src={slide.image} className={`${scrollTracker + 1 === i ? 'w-360px h-270px' : 'w-240px h-180px'} h-auto`} alt='slide.title' />
-                        <h3 className='' >
-                            {slide.codeName}
-                        </h3>
+                    <div className='text-center flex flex-col gap-1' >
+                        <img src={slide.image} className={`${scrollTracker + 1 === i ? 'w-360px h-270px' : 'w-240px h-180px mt-5'}`} alt='slide.title' />
+                        {scrollTracker + 1 !== i &&
+                            < h3 className='' >
+                                {slide.codeName}
+                            </h3>
+                        }
                     </div>
                 </div>
-            </div>
+            </div >
         )
     })
 
@@ -90,15 +92,15 @@ const Slider = () => {
             <div className='flex flex-row relative w-fit left-1/2 ttf items-center mb-96 gap-3 px-3' >
                 {
                     scrollTracker < 0 ?
-                        <button className='px-3 py-2 bg-blue-500 opacity-70 cursor-not-allowed'><AiFillCaretLeft /></button>
-                        : <Button primary onClick={onPrevious}><AiFillCaretLeft /></Button>
+                        <button className='px-3 py-2 mb-10 bg-blue-500 opacity-70 cursor-not-allowed'><AiFillCaretLeft /></button>
+                        : <Button primary className="mb-10" onClick={onPrevious}><AiFillCaretLeft /></Button>
                 }
                 <div className='py-3 cards-group ' >
                     <div id='cards-container' className='flex flex-row justify-between items-center w-auto cards-container' >
                         {renderCards}
                     </div>
                 </div>
-                <Button primary className="" onClick={onNext}><AiFillCaretRight /></Button>
+                <Button primary className="mb-10" onClick={onNext}><AiFillCaretRight /></Button>
             </div>
         </div>
     )
