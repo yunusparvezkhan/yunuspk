@@ -26,7 +26,7 @@ const AchievementsWidget = () => {
             <div className='flex flex-col items-center justify-between mt-10 achievements-widget-container' >
                 <h1 className='text-5xl w-fit mb-10' >Achievements</h1>
                 <Slider slides={data} activeCard={activeCard} onActiveCardChange={setActiveCard} />
-                <AchievementsPanelRenderer />
+                <AchievementsPanelRenderer title={data[activeCard].title} description={data[activeCard].description} codeName={data[activeCard].codeName} />
             </div>
         )
     }

@@ -1,0 +1,22 @@
+.achievementsPanel {
+    width: 60%;
+    min-height: 400px;
+    background-color: #0E1F30;
+}
+
+.achievements-panel-title-bar {
+    min-height: 40px;
+    margin-top: 20px;
+    border-bottom: 1px solid #AFAFAF;
+    letter-spacing: 1px;
+}
+
+.achievements-panel-description-box {
+    min-height: 280px;
+}
+
+.achievements-panel-description-box p {
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    color: #DFDFDF;
+}
