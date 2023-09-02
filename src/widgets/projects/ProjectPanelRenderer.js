@@ -7,7 +7,7 @@ import Vidsfetapp from './panels/Vidsfetapp';
 import Picsfetapp from './panels/Picsfetapp';
 import Ulbm from './panels/Ulbm';
 
-const PanelRenderer = ({ projectTitle }) => {
+const ProjectPanelRenderer = ({ projectTitle }) => {
     if (projectTitle === "adprv") {
         return (
             <div>
@@ -53,4 +53,4 @@ const PanelRenderer = ({ projectTitle }) => {
     }
 }
 
-export default PanelRenderer
+export default ProjectPanelRenderer;
