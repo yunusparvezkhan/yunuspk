@@ -3,7 +3,7 @@ import Button from './Button';
 
 import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai'
 
-const Slider = ({ slides }) => {
+const Slider = ({ slides, activeCard, onActiveCardChange }) => {
 
     const [orientation, setOrientation] = useState(slides.map((slide) => slide));
     const [transformNum, setTransformNum] = useState(0);
@@ -19,6 +19,7 @@ const Slider = ({ slides }) => {
         setOrientation(NewOrientation);
         scrollDifTracker > 0 && setScrollDifTracker(scrollDifTracker - 1);
         setScrollTracker(scrollTracker + 1);
+        onActiveCardChange(activeCard + 1);
     }
 
     const onPrevious = () => {
@@ -26,6 +27,7 @@ const Slider = ({ slides }) => {
         scrollTracker >= 0 && setTransformNum(transformNum + 264);
         scrollTracker >= 0 && setScrollTracker(scrollTracker - 1);
         scrollTracker >= 0 && setScrollDifTracker(scrollDifTracker + 1);
+        scrollTracker >= 0 && onActiveCardChange(activeCard - 1);
     }
 
     const renderCards = orientation.map((slide, i) => {
