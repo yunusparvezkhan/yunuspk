@@ -27,7 +27,7 @@ const Slider = ({ slides, activeCard, onActiveCardChange }) => {
         scrollTracker >= 0 && setTransformNum(transformNum + 264);
         scrollTracker >= 0 && setScrollTracker(scrollTracker - 1);
         scrollTracker >= 0 && setScrollDifTracker(scrollDifTracker + 1);
-        scrollTracker >= 0 && onActiveCardChange(activeCard - 1);
+        scrollTracker >= 0 && activeCard === 0 ? onActiveCardChange(slides.length - 1) : onActiveCardChange(activeCard - 1);
     }
 
     const renderCards = orientation.map((slide, i) => {
