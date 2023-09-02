@@ -7,7 +7,6 @@ import { useFetchAchievementsWidgetQuery } from '../store';
 const AchievementsWidget = () => {
     const { data, error, isLoading } = useFetchAchievementsWidgetQuery();
     const [activeCard, setActiveCard] = useState(1);
-    console.log(activeCard);
 
     if (isLoading) {
         return (
