@@ -19,7 +19,7 @@ const Slider = ({ slides, activeCard, onActiveCardChange }) => {
         setOrientation(NewOrientation);
         scrollDifTracker > 0 && setScrollDifTracker(scrollDifTracker - 1);
         setScrollTracker(scrollTracker + 1);
-        onActiveCardChange(activeCard + 1);
+        activeCard === slides.length - 1 ? onActiveCardChange(0) : onActiveCardChange(activeCard + 1);
     }
 
     const onPrevious = () => {
