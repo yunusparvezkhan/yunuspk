@@ -8,49 +8,49 @@ const Slider = () => {
     const slides = [
         {
             image: "https://mediabase.netlify.app/achievements/certificates/compressed/670px/certificate-1.jpg",
-            title: "some certificate",
+            title: "Circle Level Science Exhibition, Murarai 2017",
             codeName: "alpha",
             description: "some description"
         },
         {
             image: "https://mediabase.netlify.app/achievements/certificates/compressed/670px/certificate-2.jpg",
-            title: "some certificate",
+            title: "25th District Level NCSC, Birbhum 2017",
             codeName: "beta",
             description: "some description"
         },
         {
             image: "https://mediabase.netlify.app/achievements/certificates/compressed/670px/certificate-3.jpg",
-            title: "some certificate",
+            title: "Circle Level Science Exhibition, Murarai 2018",
             codeName: "gamma",
             description: "some description"
         },
         {
             image: "https://mediabase.netlify.app/achievements/certificates/compressed/670px/certificate-4.jpg",
-            title: "some certificate",
+            title: "Debate on the effects of Swami Vivekananda's Chicago Address, Murarai 2018",
             codeName: "delta",
             description: "some description"
         },
         {
             image: "https://mediabase.netlify.app/achievements/certificates/compressed/670px/certificate-5.jpg",
-            title: "some certificate",
+            title: "26th District Level NCSC, Birbhum 2018",
             codeName: "epsilon",
             description: "some description"
         },
         {
             image: "https://mediabase.netlify.app/achievements/certificates/compressed/670px/certificate-6.jpg",
-            title: "some certificate",
+            title: "26th State Level NCSC, West Bengal 2018",
             codeName: "zeta",
             description: "some description"
         },
         {
             image: "https://mediabase.netlify.app/achievements/certificates/compressed/670px/certificate-7.jpg",
-            title: "some certificate",
+            title: "District Level Science Exhibition, Birbhum 2018",
             codeName: "eta",
             description: "some description"
         },
         {
             image: "https://mediabase.netlify.app/achievements/certificates/compressed/670px/certificate-8.jpg",
-            title: "some certificate",
+            title: "State Level Skill Competition & Career Expo, West Bengal 2019",
             codeName: "theta",
             description: "some description"
         }
@@ -86,8 +86,8 @@ const Slider = () => {
                     <div className='text-center flex flex-col gap-1' >
                         <img src={slide.image} className={`${scrollTracker + 1 === i ? 'w-360px h-270px' : 'w-240px h-180px mt-5'}`} alt='slide.title' />
                         {scrollTracker + 1 !== i &&
-                            < h3 className='' >
-                                {slide.codeName}
+                            < h3 className='text-xs' >
+                                {slide.title}
                             </h3>
                         }
                     </div>
