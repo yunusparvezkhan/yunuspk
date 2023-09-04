@@ -49,9 +49,6 @@ const Slider = ({ slides, activeCard, onActiveCardChange }) => {
 
     return (
         <div>
-            <h1 className='text-center text-3xl mb-10' >
-                Slider
-            </h1>
             <div className='flex flex-row relative w-fit left-1/2 ttf items-center mb-10 gap-3 px-3' >
                 {
                     scrollTracker < 0 ?
